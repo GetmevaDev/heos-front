@@ -1,0 +1,81 @@
+
+.testimonials {
+    background: #F2F2F2;
+    margin-bottom: 100px;
+}
+
+.testimonialsInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 78px;
+}
+
+.arrows svg {
+    cursor: pointer;
+}
+
+.arrowLeft {
+    margin-right: 40px;
+}
+
+
+.title {
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 80px;
+    color: #333333;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 100px;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 30px 30px rgba(49, 49, 49, 0.1);
+    border-radius: 10px;
+    flex: 1;
+    margin-left: 30px;
+    padding: 35px 35px 25px 30px;
+}
+
+
+.cardInner {
+    display: flex;
+}
+
+.cardInner h5 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 5px;
+    font-size: 20px;
+    line-height: 26px;
+    color: #333333;
+}
+
+.cardImg {
+    object-fit: cover;
+    width: 54px;
+    height: 54px;
+}
+
+.nameInner {
+    display: flex;
+    flex-direction: column;
+    padding-left: 13px;
+}
+
+.cardText {
+    padding-top: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #333333;
+}

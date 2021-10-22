@@ -1,0 +1,81 @@
+.footer {
+    background: #333333;
+}
+
+.footerInner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoLeft {
+    flex: 3;
+}
+
+.menu {
+    flex: 2;
+}
+
+.menu li:nth-child(2) {
+    color: #D1A068;
+}
+
+.menu li {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 35px;
+    letter-spacing: 0.1px;
+    color: #fff;
+}
+
+.social {
+    flex: 2;
+}
+
+.contact {
+    flex: 3;
+}
+
+.contact p b {
+    color: #D1A068;
+}
+
+
+
+.logoRight {
+    padding-top: 55px;
+    padding-left: 70px;
+    flex: 3;
+}
+
+.logoRight span {
+    color: #fff;
+}
+
+.logoRight span b{
+    color: #D1A068;
+}
+
+.footer p {
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    padding-top: 20px;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+}
+
+.footer h4 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+}
+

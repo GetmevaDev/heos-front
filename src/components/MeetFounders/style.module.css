@@ -1,0 +1,59 @@
+.meet {
+    margin-bottom: 100px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center;
+    color: #333333;
+}
+
+.centerMeet {
+    display: flex;
+    padding-top: 65px;
+    justify-content: center;
+    position: relative;
+}
+
+.centerMeet:after {
+    content: '';
+    width: 528px;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 227px;
+    background-image: url('../../images/logo-center.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(0px 4px 29px rgba(0, 0, 0, 0.25));
+}
+
+.name {
+    font-family: "DM Sans", sans-serif;
+    padding-top: 22px;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 46px;
+    text-align: center;
+    color: #333333;
+}
+
+.leftMeet {
+}
+
+.man {
+    width: 425px;
+    height: 425px;
+    object-fit: cover;
+    border-radius: 215px;
+    background: #F2F2F2;
+}
+
+.rightMeet {
+    margin-left: 140px;
+}

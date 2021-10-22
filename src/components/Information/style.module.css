@@ -1,0 +1,73 @@
+
+.info {
+    display: flex;
+    align-items: start;
+    margin-bottom: 100px;
+}
+
+.address {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.info svg {
+    width: 80px;
+    background: #D1A068;
+    z-index: 5;
+}
+
+.hours {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infoLogo {
+    background: #D1A068;
+    width: 80px;
+    height: 80px;
+    border-radius: 45px;
+}
+
+.infoTitle {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 33px;
+    color: #333333;
+}
+
+.info p {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #878787;
+}
+
+.address p {
+    color: #333333;
+}
+
+.info p b {
+    color: #333333;
+}
+
