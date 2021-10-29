@@ -1,22 +1,65 @@
-import React from 'react';
-import styles from './style.module.css'
-import LogoCenter from '../../images/logo-center.png'
+import React from "react";
+import { useQuery, gql } from "@apollo/client";
+
+import styles from "./style.module.css";
+import LogoCenter from "../../images/logo-center.png";
+
+const REVIEWS = gql`
+  query Team {
+    blockAddresses {
+      desc
+      bg {
+        url
+      }
+      location {
+        url
+      }
+      centerlogo {
+        url
+      }
+    }
+  }
+`;
 
 const BlockAdress = () => {
-	return (
-		<div className={styles.blockAddress}>
-			<img className={styles.blockimg} src={LogoCenter} alt=""/>
-			<div className={styles.leftBlock}>
-				<p>29 East 61st 4th Floor New York,
-					NY 10065
-				</p>
-			</div>
-			<div className={styles.rightBlock}>
-				<p>2422 Montauk Hwy, Bridgehampton,
-					NY 11932
-				</p>
-			</div>
-		</div>
-	);
+  const { loading, error, data } = useQuery(REVIEWS);
+
+  if (loading) return <p>loading</p>;
+  if (error) return <p>error</p>;
+
+  console.log(data);
+  return (
+    <div className={styles.blockAddress}>
+      <img
+        className={styles.blockimg}
+        src={data.blockAddresses[0].centerlogo[0].url}
+        alt=""
+      />
+      <div
+        className={styles.leftBlock}
+        style={{ backgroundImage: `url(${data.blockAddresses[0].bg[0].url})` }}
+      >
+        <span
+          className={styles.location}
+          style={{
+            backgroundImage: `url(${data.blockAddresses[0].location[0].url})`,
+          }}
+        ></span>
+        <p>{data.blockAddresses[0].desc}</p>
+      </div>
+      <div
+        className={styles.rightBlock}
+        style={{ backgroundImage: `url(${data.blockAddresses[1].bg[0].url})` }}
+      >
+        <span
+          className={styles.location}
+          style={{
+            backgroundImage: `url(${data.blockAddresses[1].location[0].url})`,
+          }}
+        ></span>
+        <p>{data.blockAddresses[1].desc}</p>
+      </div>
+    </div>
+  );
 };
 export default BlockAdress;

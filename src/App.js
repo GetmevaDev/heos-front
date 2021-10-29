@@ -1,25 +1,17 @@
-import React from 'react';
-import Navbar from "./components/Navbar";
-import BlockAdress from "./components/BlockAdress";
-import AboutUs from "./components/AboutUs";
-import MeetFounders from "./components/MeetFounders";
-import Testimonials from "./components/Testimonials";
-import Info from "./components/Information";
-import Footer from "./components/Footer";
-import Instagramm from "./components/Instagram";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 const App = () => {
-	return (
-		<div>
-			<Navbar/>
-			<BlockAdress/>
-			<AboutUs/>
-			<MeetFounders/>
-			<Instagramm/>
-			<Testimonials/>
-			<Info/>
-			<Footer/>
-		</div>
-	);
+  return (
+    <Switch>
+      <Route path="/" component={Home} exact />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+    </Switch>
+  );
 };
 export default App;

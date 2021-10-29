@@ -1,0 +1,34 @@
+.titleTeam {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 80px;
+  color: #333333;
+  padding-bottom: 31px;
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card {
+  padding-left: 30px;
+}
+
+.name {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 33px;
+  color: #333333;
+}
+
+.card p {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #d1a068;
+  padding-bottom: 25px;
+}

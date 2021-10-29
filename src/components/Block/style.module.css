@@ -1,0 +1,26 @@
+.block {
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 350px;
+  margin-bottom: 81px;
+}
+
+.blockInner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 74px;
+  align-items: center;
+}
+
+.block h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 83px;
+  color: #ffffff;
+}
+
+.block img {
+  opacity: 0.4;
+}

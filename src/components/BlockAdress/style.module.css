@@ -1,89 +1,88 @@
-
 .blockAddress {
-    display: flex;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 540px;
-    position: relative;
-    justify-content: space-between;
-    margin-bottom: 100px;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 540px;
+  position: relative;
+  justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 .blockAddress p {
-    font-family: "DM Sans", sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 33px;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    color: #FFFFFF;
-    text-shadow: 0 6px 21px #000000;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 33px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  color: #ffffff;
+  text-shadow: 0 6px 21px #000000;
 }
-
-.blockAddress p:after {
-    content: "";
-    position: absolute;
-    width: 100px;
-    object-fit: cover;
-    height: 100px;
-    background-image: url('../../images/location.png');
-    background-repeat: no-repeat;
+.location {
+  position: absolute;
+  width: 100px;
+  top: 50%;
+  left: 45%;
+  object-fit: cover;
+  height: 100px;
+  /* background-image: url("../../images/location.png"); */
+  background-repeat: no-repeat;
 }
 
 .blockimg {
-    width: 479px;
-    position: absolute;
-    z-index: 5;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 207px;
+  width: 479px;
+  position: absolute;
+  z-index: 5;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 207px;
 }
 
 .leftBlock {
-    content: '';
-    position: relative;
-    background-image: url('../../images/leftblock.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-    filter: grayscale(100%);
+  content: "";
+  position: relative;
+  /* background-image: url('../../images/leftblock.png'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  filter: grayscale(100%);
 }
 
 .leftBlock p {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    width: 23.5vw;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 23.5vw;
+  transform: translate(-50%, -50%);
 }
 
 .leftBlock p:after {
-    left: 38%;
-    top: -100px;
+  left: 38%;
+  top: -100px;
 }
 
 .rightBlock {
-    content: '';
-    position: relative;
-    background-image: url('../../images/rightblock.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-    /*filter: grayscale(100%);*/
+  content: "";
+  position: relative;
+  /* background-image: url('../../images/rightblock.png'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  /*filter: grayscale(100%);*/
 }
 
 .rightBlock p {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    width: 27.5vw;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 27.5vw;
+  transform: translate(-50%, -50%);
 }
 
 .rightBlock p:after {
-    left: 38%;
-    top: -100px;
+  left: 38%;
+  top: -100px;
 }
