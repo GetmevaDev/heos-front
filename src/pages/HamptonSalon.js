@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
-import BlockAdress from "../components/BlockAdress";
-import AboutUs from "../components/AboutUs";
-import MeetFounders from "../components/MeetFounders";
-import Testimonials from "../components/Testimonials";
-import Info from "../components/Information";
-import Footer from "../components/Footer";
-import Instagramm from "../components/Instagram";
 import Navbar from "../components/Menu/Navbar";
 
-const Home = () => {
+import Block from "../components/Block";
+
+import Manhattan from "../images/mask.jpg";
+import Map from "../components/AddressMap";
+import Footer from "../components/Footer";
+import MenuHampton from "../components/HairMenuHampton";
+
+const HamptonSalon = () => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -39,15 +39,12 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <BlockAdress />
-      <AboutUs />
-      <MeetFounders />
-      <Instagramm />
-      <Testimonials />
-      <Info />
+      <Block title="Hampton Salon" img={Manhattan} />
+      <Map />
+      <MenuHampton />
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default HamptonSalon;

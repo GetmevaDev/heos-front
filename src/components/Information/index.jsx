@@ -1,11 +1,8 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
+import ReactMarkdown from "react-markdown";
 
 import styles from "./style.module.css";
-import Location from "../../images/locationInfo.svg";
-import Clock from "../../images/clock.svg";
-import Phone from "../../images/phone-call.svg";
-import ReactMarkdown from "react-markdown";
 
 const REVIEWS = gql`
   query information {
@@ -22,7 +19,7 @@ const REVIEWS = gql`
 const Info = () => {
   const { loading, error, data } = useQuery(REVIEWS);
 
-  if (loading) return <p>loading</p>;
+  if (loading) return <p></p>;
   if (error) return <p>error</p>;
   console.log(data);
   return (
@@ -34,7 +31,7 @@ const Info = () => {
             className={styles.svg}
             style={{ backgroundImage: `url(${data.infos[0].svg[0].url})` }}
           ></span>
-          <h4 className={styles.infoTitle}>Address</h4>
+          <h4 className={styles.infoTitle}>{data.infos[0].text}</h4>
           <ReactMarkdown>{data.infos[0].desc}</ReactMarkdown>
         </div>
 
@@ -45,18 +42,7 @@ const Info = () => {
             style={{ backgroundImage: `url(${data.infos[1].svg[0].url})` }}
           ></span>
           <h4 className={styles.infoTitle}>{data.infos[1].text}</h4>
-          <p>
-            Monday-Wednesday: <b> 9am – 7pm </b>
-          </p>
-          <p>
-            Thursday: <b> 10am – 8pm</b>
-          </p>
-          <p>
-            Friday: <b> 9am – 7pm </b>
-          </p>
-          <p>
-            Saturday: <b> 9am – 6pm </b>
-          </p>
+          <ReactMarkdown>{data.infos[1].desc}</ReactMarkdown>
         </div>
 
         <div className={styles.phone}>

@@ -2,7 +2,6 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 
 import styles from "./style.module.css";
-import Woman from "../../images/woman.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 import "swiper/swiper-bundle.min.css";
@@ -26,7 +25,7 @@ const REVIEWS = gql`
 const Testimonials = () => {
   const { loading, error, data } = useQuery(REVIEWS);
 
-  if (loading) return <p>loading</p>;
+  if (loading) return <p></p>;
   if (error) return <p>error</p>;
 
   console.log(data);
@@ -38,6 +37,7 @@ const Testimonials = () => {
           <h1 className={styles.title}>Testimonials</h1>
           <div className={styles.arrows}>
             <svg
+              className="leftArrrow"
               width="16"
               height="28"
               viewBox="0 0 16 28"
@@ -46,14 +46,14 @@ const Testimonials = () => {
             >
               <path
                 d="M14 26L2 14L14 2"
-                stroke="#BFBFBF"
+                stroke="#c4c4c4"
                 strokeWidth="3"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
             </svg>
-
             <svg
+              className="rightArrow"
               width="16"
               height="28"
               viewBox="0 0 16 28"
@@ -77,6 +77,7 @@ const Testimonials = () => {
                 slidesPerView: 1,
                 spaceBetweenSlides: 30,
                 pagination: false,
+                slidesPerGroup: 1,
               },
 
               768: {
@@ -89,10 +90,16 @@ const Testimonials = () => {
                 slidesPerView: 3,
                 spaceBetweenSlides: 40,
                 slidesPerGroup: 1,
+                navigation: {
+                  nextEl: ".rightArrow", // arrows on the side of the slides
+                  prevEl: ".leftArrow", // arrows on the side of the slides
+                },
               },
             }}
             slidesPerView={3}
             spaceBetween={30}
+            keyboard={true}
+            className="mySwiper"
             slidesPerGroup={3}
             loop={true}
             loopFillGroupWithBlank={true}
@@ -100,7 +107,6 @@ const Testimonials = () => {
             pagination={{
               clickable: true,
             }}
-            navigation={true}
             className="mySwiper"
           >
             {data.testimonials.map((item) => (

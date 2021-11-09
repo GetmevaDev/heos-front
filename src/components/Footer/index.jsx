@@ -60,7 +60,6 @@ const Footer = ({ location }) => {
           <div className={styles.contact}>
             <h4>Contact</h4>
             <p>
-              {" "}
               29 East 61st 4th Floor New York, NY 10065 2422 Montauk Hwy,
               Bridgehampton, NY 11932
             </p>

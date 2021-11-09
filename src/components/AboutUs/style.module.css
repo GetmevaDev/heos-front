@@ -1,68 +1,169 @@
 .about {
-    background: #333333;
-    max-width: 1480px;
-    min-height: 840px;
-    position: relative;
-    margin-bottom: 150px;
+  background: #333333;
+  max-width: 1480px;
+  min-height: 840px;
+  position: relative;
+  margin-bottom: 150px;
 }
 
 .about:after {
-    content: "";
-    z-index: 5;
-    position: absolute;
-    background-image: url('../../images/line.png');
-    width: 210px;
-    height: 2px;
-    left: 0;
-    top: 155px;
+  content: "";
+  z-index: 5;
+  position: absolute;
+  background-image: url("../../images/line.png");
+  width: 210px;
+  height: 2px;
+  left: 0;
+  top: 155px;
 }
 
 .center {
-    margin-top: 115px;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 115px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-
-
 .left {
-    margin-left: 130px;
-    margin-top: 115px;
+  margin-left: 130px;
+  margin-top: 115px;
 }
 
 .right {
-    margin-left: 63px;
+  margin-left: 63px;
 }
 
 .photo {
-    right: -100px;
-    position: absolute;
-    top: 100px;
+  right: -100px;
+  position: absolute;
+  top: 100px;
 }
 
 .title {
-    font-size: 64px;
-    line-height: 80px;
-    color: #FFFFFF;
-    font-weight: 300;
+  font-size: 64px;
+  line-height: 80px;
+  color: #ffffff;
+  font-weight: 300;
 }
 
 .title strong {
-    font-weight: bold;
-    font-size: 64px;
+  font-weight: bold;
+  font-size: 64px;
 
-    line-height: 29px;
-    letter-spacing: 0.5px;
-    color: #D1A068;
+  line-height: 29px;
+  letter-spacing: 0.5px;
+  color: #d1a068;
 }
 
 .desc {
-    padding-top: 31px;
-    padding-bottom: 40px;
-    font-family: " DM Sans", sans-serif;
-    font-size: 18px;
-    line-height: 27px;
-    max-width: 555px;
-    letter-spacing: 0.67165px;
-    color: #FFFFFF;
+  padding-top: 31px;
+  padding-bottom: 40px;
+  font-family: " DM Sans", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  max-width: 555px;
+  letter-spacing: 0.67165px;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .about {
+    margin-bottom: 50px;
+  }
+
+  .center {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-left: 130px;
+    margin-top: 80px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .right {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+
+  .photo {
+    position: relative;
+
+    top: 0;
+  }
+
+  .about:after {
+    top: 75px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .about {
+    margin-bottom: 50px;
+  }
+
+  .center {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .right {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+
+  .photo {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+
+  .about:after {
+    top: 55px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .about {
+    margin-bottom: 50px;
+  }
+
+  .center {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .right {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+
+  .photo {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+
+  .about:after {
+    top: 55px;
+  }
 }

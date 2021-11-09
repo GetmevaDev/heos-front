@@ -24,3 +24,28 @@
 .block img {
   opacity: 0.4;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .block {
+    margin-bottom: 0;
+  }
+
+  .block h1 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    white-space: nowrap;
+    line-height: 83px;
+    color: white;
+    transform: translateX(-50%);
+  }
+}

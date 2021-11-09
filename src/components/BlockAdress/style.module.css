@@ -86,3 +86,41 @@
   left: 38%;
   top: -100px;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .blockimg {
+    top: 25%;
+  }
+
+  .location {
+    top: 45%;
+    left: 38%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .blockimg {
+    top: 25%;
+  }
+  .location {
+    top: 45%;
+    left: 38%;
+  }
+  .blockAddress p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .blockimg {
+    top: 30%;
+  }
+  .location {
+    top: 45%;
+    left: 38%;
+  }
+
+  .blockAddress p {
+    font-size: 15px;
+  }
+}

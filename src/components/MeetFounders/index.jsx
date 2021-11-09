@@ -1,25 +1,60 @@
-import React from 'react';
-import styles from './style.module.css'
-import Man1 from '../../images/man1.png'
-import Man2 from '../../images/man2.png'
+import React from "react";
+import { useQuery, gql } from "@apollo/client";
+
+import styles from "./style.module.css";
+import Man1 from "../../images/man1.png";
+import Man2 from "../../images/man2.png";
+
+const REVIEWS = gql`
+  query meet {
+    meetFounders {
+      title
+      photo {
+        url
+      }
+      logo {
+        url
+      }
+      name
+    }
+  }
+`;
 
 const MeetFounders = () => {
-	return (
-		<div className="container">
-			<div className={styles.meet}>
-				<h1 className={styles.title}>Meet the Founders</h1>
-				<div className={styles.centerMeet}>
-					<div className={styles.leftMeet}>
-						<img className={styles.man} src={Man1} alt=""/>
-						<h3 className={styles.name}>Eddie Rubinov</h3>
-					</div>
-					<div className={styles.rightMeet}>
-						<img className={styles.man} src={Man2} alt=""/>
-						<h3 className={styles.name}>Arthur Shamalov</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+  const { loading, error, data } = useQuery(REVIEWS);
+
+  if (loading) return <p>loading</p>;
+  if (error) return <p>error</p>;
+  return (
+    <div className="container">
+      <div className={styles.meet}>
+        <h1 className={styles.title}>{data.meetFounders[0].title}</h1>
+        <div className={styles.centerMeet}>
+          <span
+            className={styles.ceneterMeetLogo}
+            style={{
+              backgroundImage: `url(${data.meetFounders[0].logo[0].url})`,
+            }}
+          ></span>
+          <div className={styles.leftMeet}>
+            <img
+              className={styles.man}
+              src={data.meetFounders[0].photo[0].url}
+              alt=""
+            />
+            <h3 className={styles.name}>{data.meetFounders[0].name}</h3>
+          </div>
+          <div className={styles.rightMeet}>
+            <img
+              className={styles.man}
+              src={data.meetFounders[1].photo[0].url}
+              alt=""
+            />
+            <h3 className={styles.name}>{data.meetFounders[1].name}v</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 export default MeetFounders;

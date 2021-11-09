@@ -2,7 +2,6 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 
 import styles from "./style.module.css";
-import LogoCenter from "../../images/logo-center.png";
 
 const REVIEWS = gql`
   query Team {

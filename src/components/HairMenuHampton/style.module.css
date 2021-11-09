@@ -1,0 +1,96 @@
+.menuHampton {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  background: #222222;
+}
+
+.menuHamptonTwo {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  background: #333333;
+}
+
+.menu {
+  display: flex;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.left {
+  margin-top: 30px;
+}
+
+.menuInner {
+  display: flex;
+  flex-direction: column;
+}
+
+.left h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 30px;
+  position: absolute;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.left h3:after {
+  content: "";
+  width: 100px;
+  top: 25px;
+  display: block;
+  height: 5px;
+  position: relative;
+  border-bottom: 5px solid #d1a068;
+  border-radius: 4.5px;
+}
+
+.left p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 5px;
+  color: #ffffff;
+}
+
+.price {
+  display: flex;
+
+  min-width: 480px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.pricesLeft {
+  padding-top: 5px;
+}
+
+.pricesRight {
+  padding-left: 25px;
+}
+
+.menu h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  color: #ffffff;
+}
+
+.menu h1 {
+  font-family: "DM Sans", sans-serif;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 110px;
+  line-height: 93px;
+  color: #ffffff;
+  writing-mode: tb-rl;
+  transform: rotate(360deg);
+}
+
+.menu h1 p {
+  color: #d1a068;
+}

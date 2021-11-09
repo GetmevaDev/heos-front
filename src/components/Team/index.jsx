@@ -10,8 +10,8 @@ const Team = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = () => {
-    const firstContent = "http://localhost:1337/hampton-teams";
-    const secondContent = "http://localhost:1337/manhattan-teams";
+    const firstContent = "https://heos.herokuapp.com/hampton-teams";
+    const secondContent = "https://heos.herokuapp.com/manhattan-teams";
 
     const getApiFirst = axios.get(firstContent);
     const getApiSecond = axios.get(secondContent);
@@ -35,7 +35,7 @@ const Team = () => {
     fetchData();
   }, []);
 
-  if (loading) return <div>loading</div>;
+  if (loading) return <div></div>;
   console.log(secondSign);
 
   return (
