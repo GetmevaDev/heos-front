@@ -4,15 +4,33 @@
     <list default="true" id="68efc971-19f7-45e1-94e3-2228d5879d68" name="Changes" comment="pages">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AboutUs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutUs/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutUs/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutUs/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddressMap/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddressMap/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Block/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Block/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Block/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Block/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BlockAdress/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockAdress/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BlockAdress/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockAdress/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Information/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Information/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Information/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Information/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MeetFounders/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MeetFounders/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MeetFounders/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MeetFounders/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/navbar.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Team/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Team/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Team/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Team/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Testimonials/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testimonials/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +92,7 @@
       <workItem from="1634885556300" duration="13954000" />
       <workItem from="1635498984746" duration="750000" />
       <workItem from="1635591204375" duration="16000" />
+      <workItem from="1636458531412" duration="56000" />
     </task>
     <task id="LOCAL-00001" summary="home">
       <created>1634897944362</created>

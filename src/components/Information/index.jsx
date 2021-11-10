@@ -12,6 +12,9 @@ const REVIEWS = gql`
       svg {
         url
       }
+      clock {
+        text
+      }
     }
   }
 `;
@@ -21,6 +24,7 @@ const Info = () => {
 
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
+  console.log(data);
   console.log(data);
   return (
     <div className="container">
@@ -42,7 +46,9 @@ const Info = () => {
             style={{ backgroundImage: `url(${data.infos[1].svg[0].url})` }}
           ></span>
           <h4 className={styles.infoTitle}>{data.infos[1].text}</h4>
-          <ReactMarkdown>{data.infos[1].desc}</ReactMarkdown>
+          {data.infos[1].clock.map(({ text }) => (
+            <ReactMarkdown>{text}</ReactMarkdown>
+          ))}
         </div>
 
         <div className={styles.phone}>
@@ -53,12 +59,9 @@ const Info = () => {
           ></span>
 
           <h4 className={styles.infoTitle}>{data.infos[2].text}</h4>
-          <p>
-            Bridgehampton Salon: <b>631-537-8000</b>
-          </p>
-          <p>
-            NYC Salon: <b>212-837-1014</b>
-          </p>
+          {data.infos[2].clock.map(({ text }) => (
+            <ReactMarkdown>{text}</ReactMarkdown>
+          ))}
         </div>
       </div>
     </div>

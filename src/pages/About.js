@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-
+import React from "react";
+import { Helmet } from "react-helmet";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
+import { useQuery, gql } from "@apollo/client";
 
 import Navbar from "../components/Menu/Navbar";
 
@@ -12,6 +13,20 @@ import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 import Info from "../components/Information";
 
+const REVIEWS = gql`
+  query seo {
+    aboutseo {
+      aboutSeo {
+        seo
+        title
+        bg {
+          url
+        }
+      }
+    }
+  }
+`;
+
 const About = () => {
   const override = css`
     display: block;
@@ -19,29 +34,31 @@ const About = () => {
     top: 300px;
     border-color: red;
   `;
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
-  }, []);
+  const { loading, error, data } = useQuery(REVIEWS);
+  console.log(data);
 
   if (loading)
     return (
       <p>
-        {loading ? (
-          <ClipLoader loading={loading} css={override} size={120} />
-        ) : (
-          ""
-        )}
+        <ClipLoader loading={loading} css={override} size={120} />
       </p>
     );
+  if (error) return <p>error {JSON.stringify(error)}</p>;
+
+  console.log(loading);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{data.aboutseo.aboutSeo.seo}</title>
+      </Helmet>
       <Navbar />
 
-      <Block title="Meet The Team" />
+      <Block
+        title={data.aboutseo.aboutSeo.title}
+        img={data.aboutseo.aboutSeo.bg[0].url}
+      />
 
       <Team />
 

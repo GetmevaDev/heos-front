@@ -73,6 +73,10 @@
   color: #878787;
 }
 
+.info p strong {
+  color: #333;
+}
+
 .address p {
   color: #333333;
 }

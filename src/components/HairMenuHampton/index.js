@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useQuery, gql } from "@apollo/client";
 
 import styles from "./style.module.css";
-import ReactMarkdown from "react-markdown";
 
 const REVIEWS = gql`
   query menu {
@@ -26,7 +25,7 @@ const REVIEWS = gql`
 const MenuHampton = () => {
   const { loading, error, data } = useQuery(REVIEWS);
 
-  if (loading) return <p>loadng</p>;
+  if (loading) return <p></p>;
   if (error) return <p>error</p>;
 
   console.log(data.hamptonMenus[0], "data");
@@ -42,13 +41,13 @@ const MenuHampton = () => {
                   <h3>{item.HamptonMenu.price}</h3>
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
-                      {item.HamptonMenu.descparagraph.map((d) => (
-                        <p>{d.desc}</p>
+                      {item.HamptonMenu.descparagraph.map((d, index) => (
+                        <p key={index}>{d.desc}</p>
                       ))}
                     </div>
                     <div className={styles.pricesRight}>
-                      {item.HamptonMenu.priceDesc.map((p) => (
-                        <p>{p.text}</p>
+                      {item.HamptonMenu.priceDesc.map((p, index) => (
+                        <p key={index}>{p.text}</p>
                       ))}
                     </div>
                   </div>
@@ -58,7 +57,7 @@ const MenuHampton = () => {
 
             <div className={styles.right}>
               <h1>
-                {data.hamptonMenus[0].title}{" "}
+                {data.hamptonMenus[0].title}
                 <p>{data.hamptonMenus[0].textColor} </p>
               </h1>
             </div>
@@ -78,13 +77,13 @@ const MenuHampton = () => {
                   <h3>{item.HamptonMenu.price}</h3>
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
-                      {item.HamptonMenu.descparagraph.map((d) => (
-                        <p>{d.desc}</p>
+                      {item.HamptonMenu.descparagraph.map((d, index) => (
+                        <p key={index}>{d.desc}</p>
                       ))}
                     </div>
                     <div className={styles.pricesRight}>
-                      {item.HamptonMenu.priceDesc.map((p) => (
-                        <p>{p.text}</p>
+                      {item.HamptonMenu.priceDesc.map((p, index) => (
+                        <p key={index}>{p.text}</p>
                       ))}
                     </div>
                   </div>
@@ -112,13 +111,13 @@ const MenuHampton = () => {
                   <h3>{item.HamptonMenu.price}</h3>
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
-                      {item.HamptonMenu.descparagraph.map((d) => (
-                        <p>{d.desc}</p>
+                      {item.HamptonMenu.descparagraph.map((d, index) => (
+                        <p key={index}>{d.desc}</p>
                       ))}
                     </div>
                     <div className={styles.pricesRight}>
-                      {item.HamptonMenu.priceDesc.map((p) => (
-                        <p>{p.text}</p>
+                      {item.HamptonMenu.priceDesc.map((p, index) => (
+                        <p key={index}>{p.text}</p>
                       ))}
                     </div>
                   </div>

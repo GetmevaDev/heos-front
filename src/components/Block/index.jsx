@@ -16,19 +16,16 @@ const REVIEWS = gql`
   }
 `;
 
-const Block = () => {
+const Block = ({ img, title }) => {
   const { loading, error, data } = useQuery(REVIEWS);
 
-  if (loading) return <p>loadng</p>;
+  if (loading) return <p></p>;
   if (error) return <p>error</p>;
   return (
-    <div
-      className={styles.block}
-      style={{ backgroundImage: `url(${data.meetTeams[0].bg[0].url})` }}
-    >
+    <div className={styles.block} style={{ backgroundImage: `url(${img})` }}>
       <div className="container">
         <div className={styles.blockInner}>
-          <h1>{data.meetTeams[0].title}</h1>
+          <h1>{title}</h1>
           <img src={data.meetTeams[0].logo[0].url} alt="logo" />
         </div>
       </div>

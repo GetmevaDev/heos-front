@@ -23,7 +23,7 @@ const REVIEWS = gql`
 const MeetFounders = () => {
   const { loading, error, data } = useQuery(REVIEWS);
 
-  if (loading) return <p>loading</p>;
+  if (loading) return <p></p>;
   if (error) return <p>error</p>;
   return (
     <div className="container">
