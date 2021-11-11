@@ -34,8 +34,8 @@ const Map = () => {
           <h4 className={styles.infoTitle}>{data.maps[0].hampton.title}</h4>
           <p>{data.maps[0].hampton.address}</p>
           <h4 className={styles.infoTitle}>{data.maps[1].hampton.title}</h4>
-          {data.maps[1].hampton.salonHours.map((item) => (
-            <ReactMarkdown>{item.date}</ReactMarkdown>
+          {data.maps[1].hampton.salonHours.map((item, index) => (
+            <ReactMarkdown key={index}>{item.date}</ReactMarkdown>
           ))}
           <h4 className={styles.infoTitle}>{data.maps[2].hampton.title}</h4>
           <b>{data.maps[2].hampton.address}</b>

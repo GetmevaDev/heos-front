@@ -1,15 +1,39 @@
 import React, { useState } from "react";
 import { Link, NavLink, withRouter } from "react-router-dom";
+import { useQuery, gql } from "@apollo/client";
+
 import "./Navbar.css";
 import Dropdown from "./Dropdown";
 import Logo from "../../images/logo.png";
 
+const REVIEWS = gql`
+  query menu {
+    navigation {
+      logo {
+        url
+      }
+      header {
+        item
+        subItem {
+          subitem
+          href
+          cName
+        }
+      }
+    }
+  }
+`;
+
 function Navbar({ location }) {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const { loading, error, data } = useQuery(REVIEWS);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  if (loading) return <p></p>;
+  if (error) return <p>error</p>;
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -31,7 +55,7 @@ function Navbar({ location }) {
     <>
       <nav className="container navbar">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src={Logo} alt="Logo" />
+          <img src={data.navigation.logo[0].url} alt="Logo" />
           <i className="fab fa-firstdraft" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
@@ -54,7 +78,7 @@ function Navbar({ location }) {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Home
+              {data.navigation?.header[0].item}
             </NavLink>
           </li>
           <li className="nav-item">
@@ -66,7 +90,7 @@ function Navbar({ location }) {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              About us
+              {data.navigation?.header[1].item}
             </NavLink>
           </li>
           <li className="nav-item">
@@ -78,7 +102,7 @@ function Navbar({ location }) {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Services
+              {data.navigation?.header[2].item}
             </NavLink>
           </li>
           <li
@@ -94,8 +118,9 @@ function Navbar({ location }) {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Contact <i className="fas fa-caret-down" />
-              {dropdown && <Dropdown />}
+              {data.navigation?.header[3].item}
+              <i className="fas fa-caret-down" />
+              {dropdown && <Dropdown data={data} />}
             </NavLink>
           </li>
 
