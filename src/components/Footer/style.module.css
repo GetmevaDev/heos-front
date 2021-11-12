@@ -33,6 +33,10 @@
   color: #d1a068;
 }
 
+.link:nth-last-child(-n + 2):hover {
+  color: rgb(20, 6, 6) !important;
+}
+
 .active {
   color: #d1a068;
 }

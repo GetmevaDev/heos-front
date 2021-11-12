@@ -50,7 +50,7 @@ const Home = () => {
       <BlockAdress />
       <AboutUs />
       <MeetFounders />
-      <Instagramm />
+      {/* <Instagramm /> */}
       <Testimonials />
       <Info />
       <Footer />

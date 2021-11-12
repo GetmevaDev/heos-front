@@ -9,7 +9,9 @@ const REVIEWS = gql`
   query about {
     aboutuses {
       title
+      textColor
       desc
+      moreabout
       photo {
         url
       }
@@ -30,8 +32,12 @@ const AboutUs = () => {
           <div className={styles.left}>
             <h1 className={styles.title}>
               <ReactMarkdown>{data.aboutuses[0].title}</ReactMarkdown>
+              <strong>{data.aboutuses[0].textColor}</strong>
             </h1>
             <p className={styles.desc}>{data.aboutuses[0].desc}</p>
+            <span className={styles.moreAbout}>
+              {data.aboutuses[0].moreabout}
+            </span>
           </div>
 
           <div className={styles.right}>

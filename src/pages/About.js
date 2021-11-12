@@ -62,7 +62,7 @@ const About = () => {
 
       <Team />
 
-      <Instagramm />
+      {/* <Instagramm />   */}
 
       <Testimonials />
 

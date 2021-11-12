@@ -25,7 +25,7 @@
 }
 
 .left {
-  margin-left: 130px;
+  margin-left: 210px;
   margin-top: 115px;
 }
 
@@ -53,6 +53,28 @@
   line-height: 29px;
   letter-spacing: 0.5px;
   color: #d1a068;
+}
+
+.moreAbout {
+  color: #d1a068;
+  margin-left: 80px;
+  font-family: "DM Sans";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: 0.5px;
+  position: absolute;
+}
+
+.moreAbout:before {
+  display: block;
+  content: "";
+  top: 15px;
+  left: -90px;
+  position: relative;
+  background: #d1a068;
+  width: 80px;
+  height: 2px;
 }
 
 .desc {

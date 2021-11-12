@@ -6,11 +6,12 @@ import styles from "./style.module.css";
 const REVIEWS = gql`
   query menu {
     manhatonMenus {
+      text
+      textColor
       manhatoMenu {
         price
         title
-        text
-        textColor
+
         descparagraphmanh {
           desc
         }
@@ -27,9 +28,7 @@ const MenuManhaton = () => {
 
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
-  console.log(data);
 
-  console.log(data.manhatonMenus);
   return (
     <>
       <div className={styles.menuHampton}>
@@ -43,14 +42,14 @@ const MenuManhaton = () => {
                   <h3>{item.manhatoMenu.price}</h3>
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
-                      {/* {item.manhatoMenu.descparagraphmanh.map((d, index) => (
+                      {item.manhatoMenu.descparagraphmanh.map((d, index) => (
                         <p key={index}>{d.desc}</p>
-                      ))} */}
+                      ))}
                     </div>
                     <div className={styles.pricesRight}>
-                      {/* {item.manhatoMenu.priceDescManh.map((p, index) => (
+                      {item.manhatoMenu.priceDescManh.map((p, index) => (
                         <p key={index}>{p.text}</p>
-                      ))} */}
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -59,7 +58,7 @@ const MenuManhaton = () => {
 
             <div className={styles.right}>
               <h1>
-                {data.manhatonMenus[0].title}
+                {data.manhatonMenus[0].text}
                 <p>{data.manhatonMenus[0].textColor} </p>
               </h1>
             </div>
@@ -79,14 +78,14 @@ const MenuManhaton = () => {
                   <h3>{item.manhatoMenu.price}</h3>
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
-                      {/* {item.manhatoMenu.descparagraphmanh.map((d, index) => (
+                      {item.manhatoMenu.descparagraphmanh.map((d, index) => (
                         <p key={index}>{d.desc}</p>
-                      ))} */}
+                      ))}
                     </div>
                     <div className={styles.pricesRight}>
-                      {/* {item.manhatoMenu.priceDescManh.map((p, index) => (
+                      {item.manhatoMenu.priceDescManh.map((p, index) => (
                         <p key={index}>{p.text}</p>
-                      ))} */}
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -95,8 +94,8 @@ const MenuManhaton = () => {
 
             <div className={styles.right}>
               <h1>
-                {data.manhatonMenus[5].title}
-                <p>{data.manhatonMenus[5].textColor} </p>
+                {data.manhatonMenus[4].text}
+                <p>{data.manhatonMenus[4].textColor} </p>
               </h1>
             </div>
           </div>
@@ -113,14 +112,14 @@ const MenuManhaton = () => {
                   <h3>{item.manhatoMenu.price}</h3>
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
-                      {/* {item.manhatoMenu.descparagraphmanh.map((d, index) => (
+                      {item.manhatoMenu.descparagraphmanh.map((d, index) => (
                         <p key={index}>{d.desc}</p>
-                      ))} */}
+                      ))}
                     </div>
                     <div className={styles.pricesRight}>
-                      {/* {item.manhatoMenu.priceDescManh.map((p, index) => (
+                      {item.manhatoMenu.priceDescManh.map((p, index) => (
                         <p key={index}>{p.text}</p>
-                      ))} */}
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -129,7 +128,7 @@ const MenuManhaton = () => {
 
             <div className={styles.right}>
               <h1>
-                {data.manhatonMenus[7].title}{" "}
+                {data.manhatonMenus[7].text}
                 <p>{data.manhatonMenus[7].textColor} </p>
               </h1>
             </div>
