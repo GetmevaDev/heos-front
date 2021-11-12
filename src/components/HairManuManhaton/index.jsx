@@ -5,16 +5,16 @@ import styles from "./style.module.css";
 
 const REVIEWS = gql`
   query menu {
-    hamptonMenus {
-      title
-      textColor
-      HamptonMenu {
-        title
+    manhatonMenus {
+      manhatoMenu {
         price
-        descparagraph {
+        title
+        text
+        textColor
+        descparagraphmanh {
           desc
         }
-        priceDesc {
+        priceDescManh {
           text
         }
       }
@@ -22,32 +22,35 @@ const REVIEWS = gql`
   }
 `;
 
-const MenuHampton = () => {
+const MenuManhaton = () => {
   const { loading, error, data } = useQuery(REVIEWS);
 
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
+  console.log(data);
 
+  console.log(data.manhatonMenus);
   return (
     <>
       <div className={styles.menuHampton}>
         <div>
           <div className={styles.menu}>
             <div className={styles.menuInner}>
-              {data.hamptonMenus.slice(0, 5).map((item, index) => (
+              {data.manhatonMenus.slice(0, 5).map((item, index) => (
                 <div className={styles.left} key={index}>
-                  <h2>{item.HamptonMenu.title}</h2>
-                  <h3>{item.HamptonMenu.price}</h3>
+                  {console.log(item.manhatoMenu, "itenms")}
+                  <h2>{item.manhatoMenu.title}</h2>
+                  <h3>{item.manhatoMenu.price}</h3>
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
-                      {item.HamptonMenu.descparagraph.map((d, index) => (
+                      {/* {item.manhatoMenu.descparagraphmanh.map((d, index) => (
                         <p key={index}>{d.desc}</p>
-                      ))}
+                      ))} */}
                     </div>
                     <div className={styles.pricesRight}>
-                      {item.HamptonMenu.priceDesc.map((p, index) => (
+                      {/* {item.manhatoMenu.priceDescManh.map((p, index) => (
                         <p key={index}>{p.text}</p>
-                      ))}
+                      ))} */}
                     </div>
                   </div>
                 </div>
@@ -56,8 +59,8 @@ const MenuHampton = () => {
 
             <div className={styles.right}>
               <h1>
-                {data.hamptonMenus[0].title}
-                <p>{data.hamptonMenus[0].textColor} </p>
+                {data.manhatonMenus[0].title}
+                <p>{data.manhatonMenus[0].textColor} </p>
               </h1>
             </div>
           </div>
@@ -70,20 +73,20 @@ const MenuHampton = () => {
         <div>
           <div className={styles.menu}>
             <div className={styles.menuInner}>
-              {data.hamptonMenus.slice(5, 6).map((item) => (
+              {data.manhatonMenus.slice(5, 6).map((item) => (
                 <div className={styles.left}>
-                  <h2>{item.HamptonMenu.title}</h2>
-                  <h3>{item.HamptonMenu.price}</h3>
+                  <h2>{item.manhatoMenu.title}</h2>
+                  <h3>{item.manhatoMenu.price}</h3>
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
-                      {item.HamptonMenu.descparagraph.map((d, index) => (
+                      {/* {item.manhatoMenu.descparagraphmanh.map((d, index) => (
                         <p key={index}>{d.desc}</p>
-                      ))}
+                      ))} */}
                     </div>
                     <div className={styles.pricesRight}>
-                      {item.HamptonMenu.priceDesc.map((p, index) => (
+                      {/* {item.manhatoMenu.priceDescManh.map((p, index) => (
                         <p key={index}>{p.text}</p>
-                      ))}
+                      ))} */}
                     </div>
                   </div>
                 </div>
@@ -92,8 +95,8 @@ const MenuHampton = () => {
 
             <div className={styles.right}>
               <h1>
-                {data.hamptonMenus[5].title}
-                <p>{data.hamptonMenus[5].textColor} </p>
+                {data.manhatonMenus[5].title}
+                <p>{data.manhatonMenus[5].textColor} </p>
               </h1>
             </div>
           </div>
@@ -104,20 +107,20 @@ const MenuHampton = () => {
         <div>
           <div className={styles.menu}>
             <div className={styles.menuInner}>
-              {data.hamptonMenus.slice(6).map((item) => (
+              {data.manhatonMenus.slice(6).map((item) => (
                 <div className={styles.left}>
-                  <h2>{item.HamptonMenu.title}</h2>
-                  <h3>{item.HamptonMenu.price}</h3>
+                  <h2>{item.manhatoMenu.title}</h2>
+                  <h3>{item.manhatoMenu.price}</h3>
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
-                      {item.HamptonMenu.descparagraph.map((d, index) => (
+                      {/* {item.manhatoMenu.descparagraphmanh.map((d, index) => (
                         <p key={index}>{d.desc}</p>
-                      ))}
+                      ))} */}
                     </div>
                     <div className={styles.pricesRight}>
-                      {item.HamptonMenu.priceDesc.map((p, index) => (
+                      {/* {item.manhatoMenu.priceDescManh.map((p, index) => (
                         <p key={index}>{p.text}</p>
-                      ))}
+                      ))} */}
                     </div>
                   </div>
                 </div>
@@ -126,8 +129,8 @@ const MenuHampton = () => {
 
             <div className={styles.right}>
               <h1>
-                {data.hamptonMenus[7].title}{" "}
-                <p>{data.hamptonMenus[7].textColor} </p>
+                {data.manhatonMenus[7].title}{" "}
+                <p>{data.manhatonMenus[7].textColor} </p>
               </h1>
             </div>
           </div>
@@ -139,4 +142,4 @@ const MenuHampton = () => {
   );
 };
 
-export default MenuHampton;
+export default MenuManhaton;

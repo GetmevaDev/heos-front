@@ -93,7 +93,7 @@ function Navbar({ location }) {
               {data.navigation?.header[1].item}
             </NavLink>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <NavLink
               to="/services"
               activeClassName={
@@ -104,7 +104,7 @@ function Navbar({ location }) {
             >
               {data.navigation?.header[2].item}
             </NavLink>
-          </li>
+          </li> */}
           <li
             className="nav-item"
             onMouseEnter={onMouseEnter}
@@ -118,7 +118,7 @@ function Navbar({ location }) {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              {data.navigation?.header[3].item}
+              {data.navigation?.header[2].item}
               <i className="fas fa-caret-down" />
               {dropdown && <Dropdown data={data} />}
             </NavLink>

@@ -1,0 +1,178 @@
+.menuHampton {
+  padding-top: 60px;
+  padding-bottom: 90px;
+  background: #222222;
+}
+
+.menuHamptonTwo {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background: #333333;
+}
+
+.menu {
+  display: flex;
+  max-width: 780px;
+  margin: 0 auto;
+  align-items: start;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.left {
+  margin-top: 30px;
+}
+
+.menuInner {
+  display: flex;
+  flex-direction: column;
+}
+
+.left h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 30px;
+  position: absolute;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.left h3:after {
+  content: "";
+  width: 100px;
+  top: 25px;
+  display: block;
+  height: 5px;
+  position: relative;
+  border-bottom: 5px solid #d1a068;
+  border-radius: 4.5px;
+}
+
+.left p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 5px;
+  color: #ffffff;
+}
+
+.price {
+  display: flex;
+
+  min-width: 480px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.pricesLeft {
+  padding-top: 5px;
+}
+
+.pricesRight {
+  padding-left: 25px;
+}
+
+.menu h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  color: #ffffff;
+}
+
+.right h1 {
+  font-family: "DM Sans", sans-serif;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 110px;
+  line-height: 93px;
+  color: #ffffff;
+  writing-mode: tb-rl;
+  transform: rotate(360deg);
+}
+
+.menu h1 p {
+  color: #d1a068;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .menuHampton {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .menuHamptonTwo {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .menuHampton {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .menuHamptonTwo {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .menuHampton {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .menuHamptonTwo {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .right h1 {
+    writing-mode: initial;
+    transform: rotate(360deg);
+    line-height: 44px;
+    font-size: 30px;
+  }
+
+  .menu h2 {
+    font-size: 20px;
+  }
+
+  .menu h3 {
+    font-size: 20px;
+  }
+
+  .left p {
+    font-size: 15px;
+  }
+
+  .pricesLeft {
+    position: relative;
+  }
+
+  .pricesLeft p {
+  }
+
+  .pricesRight {
+    position: absolute;
+    right: 0;
+    padding-right: 30px;
+  }
+
+  .right {
+    position: absolute;
+    text-align: center;
+    right: 50%;
+    top: -110px;
+    transform: translate(50%);
+  }
+}

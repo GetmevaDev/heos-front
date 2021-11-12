@@ -49,6 +49,7 @@
   background-size: cover;
   width: 50%;
   filter: grayscale(100%);
+  transition: all 0.4s ease;
 }
 
 .leftBlock p {
@@ -71,7 +72,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
-  /*filter: grayscale(100%);*/
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+}
+
+.leftBlock:hover {
+  filter: grayscale(0%);
+}
+.rightBlock:hover {
+  filter: grayscale(0%);
 }
 
 .rightBlock p {

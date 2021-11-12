@@ -14,7 +14,7 @@ function Dropdown({ data }) {
         onClick={handleClick}
         className={click ? "dropdown-menu clicked" : "dropdown-menu"}
       >
-        {data.navigation.header[3].subItem.map((item, index) => {
+        {data.navigation.header[2].subItem.map((item, index) => {
           return (
             <li key={index}>
               <Link

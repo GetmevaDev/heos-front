@@ -9,6 +9,7 @@ import Block from "../components/Block";
 import Manhattan from "../images/mask.jpg";
 import Map from "../components/AddressMap";
 import Footer from "../components/Footer";
+import MenuManhaton from "../components/HairManuManhaton";
 
 const ManhatonSalon = () => {
   const override = css`
@@ -40,6 +41,7 @@ const ManhatonSalon = () => {
       <Navbar />
       <Block title="Manhattan Salon" img={Manhattan} />
       <Map />
+      <MenuManhaton />
       <Footer />
     </div>
   );
