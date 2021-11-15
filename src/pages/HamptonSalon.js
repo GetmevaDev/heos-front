@@ -1,7 +1,8 @@
 import React, { lazy } from "react";
 
 import { useQuery, gql } from "@apollo/client";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
 
@@ -50,10 +51,14 @@ const HamptonSalon = () => {
   if (error) return <p>error {JSON.stringify(error)}</p>;
 
   return (
-    <div>
-      <Helmet>
+    <>
+      <Helmet prioritizeSeoTags>
         <meta charSet="utf-8" />
         <title>{data.hamptonSalon.ham.seo}</title>
+        {/* <link rel="notImportant" href="https://www.chipotle.com" />
+          <meta name="whatever" value="notImportant" />
+          <link rel="canonical" href="https://www.tacobell.com" />
+          <meta property="og:title" content="A very important title" /> */}
       </Helmet>
       <Navbar />
       <Block
@@ -62,8 +67,8 @@ const HamptonSalon = () => {
       />
       <Map />
       <MenuHampton />
-      <Footer />
-    </div>
+      <Footer />{" "}
+    </>
   );
 };
 

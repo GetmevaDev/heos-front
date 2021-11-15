@@ -71,8 +71,8 @@ const MenuManhaton = () => {
         <div>
           <div className={styles.menu}>
             <div className={styles.menuInner}>
-              {data.manhatonMenus.slice(5, 6).map((item) => (
-                <div className={styles.left}>
+              {data.manhatonMenus.slice(5, 6).map((item, index) => (
+                <div className={styles.left} key={index}>
                   <h2>{item.manhatoMenu.title}</h2>
                   <h3>{item.manhatoMenu.price}</h3>
                   <div className={styles.price}>
@@ -105,8 +105,8 @@ const MenuManhaton = () => {
         <div>
           <div className={styles.menu}>
             <div className={styles.menuInner}>
-              {data.manhatonMenus.slice(6).map((item) => (
-                <div className={styles.left}>
+              {data.manhatonMenus.slice(6).map((item, index) => (
+                <div className={styles.left} key={index}>
                   <h2>{item.manhatoMenu.title}</h2>
                   <h3>{item.manhatoMenu.price}</h3>
                   <div className={styles.price}>

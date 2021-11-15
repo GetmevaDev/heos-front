@@ -70,8 +70,8 @@ const MenuHampton = () => {
         <div>
           <div className={styles.menu}>
             <div className={styles.menuInner}>
-              {data.hamptonMenus.slice(5, 6).map((item) => (
-                <div className={styles.left}>
+              {data.hamptonMenus.slice(5, 6).map((item, index) => (
+                <div className={styles.left} key={index}>
                   <h2>{item.HamptonMenu.title}</h2>
                   <h3>{item.HamptonMenu.price}</h3>
                   <div className={styles.price}>
@@ -104,8 +104,8 @@ const MenuHampton = () => {
         <div>
           <div className={styles.menu}>
             <div className={styles.menuInner}>
-              {data.hamptonMenus.slice(6).map((item) => (
-                <div className={styles.left}>
+              {data.hamptonMenus.slice(6).map((item, index) => (
+                <div className={styles.left} key={index}>
                   <h2>{item.HamptonMenu.title}</h2>
                   <h3>{item.HamptonMenu.price}</h3>
                   <div className={styles.price}>
