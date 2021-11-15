@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, memo } from "react";
 
 import { useQuery, gql } from "@apollo/client";
 import { Helmet } from "react-helmet";
@@ -31,7 +31,7 @@ const REVIEWS = gql`
   }
 `;
 
-const ManhatonSalon = () => {
+const ManhatonSalon = memo(() => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -64,6 +64,6 @@ const ManhatonSalon = () => {
       <Footer />
     </div>
   );
-};
+});
 
 export default ManhatonSalon;

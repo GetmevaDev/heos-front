@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, memo } from "react";
 
 import { useQuery, gql } from "@apollo/client";
 import ClipLoader from "react-spinners/HashLoader";
@@ -32,7 +32,7 @@ const REVIEWS = gql`
   }
 `;
 
-const Home = () => {
+const Home = memo(() => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -65,6 +65,6 @@ const Home = () => {
       <Footer />
     </div>
   );
-};
+});
 
 export default Home;

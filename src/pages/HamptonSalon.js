@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, memo } from "react";
 
 import { useQuery, gql } from "@apollo/client";
 import { Helmet } from "react-helmet-async";
@@ -32,7 +32,7 @@ const REVIEWS = gql`
   }
 `;
 
-const HamptonSalon = () => {
+const HamptonSalon = memo(() => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -70,6 +70,6 @@ const HamptonSalon = () => {
       <Footer />{" "}
     </>
   );
-};
+});
 
 export default HamptonSalon;

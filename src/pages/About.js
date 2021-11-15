@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, memo } from "react";
 
 import { Helmet } from "react-helmet";
 import ClipLoader from "react-spinners/HashLoader";
@@ -34,7 +34,7 @@ const REVIEWS = gql`
   }
 `;
 
-const About = () => {
+const About = memo(() => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -76,6 +76,6 @@ const About = () => {
       <Footer />
     </div>
   );
-};
+});
 
 export default About;
