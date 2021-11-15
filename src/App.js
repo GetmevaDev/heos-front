@@ -13,7 +13,7 @@ const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const ManhatonSalon = lazy(() => import("./pages/ManhatonSalon"));
 const HamptonSalon = lazy(() => import("./pages/HamptonSalon"));
-const NotFound = lazy(() => import("./pages/404"));
+// const NotFound = lazy(() => import("./pages/404"));
 
 const App = () => {
   const override = css`
@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/about" component={About} />
         <Route path="/contact/manhaton" component={ManhatonSalon} />
         <Route path="/contact/hampton" component={HamptonSalon} />
-        <Route component={NotFound} />
+        {/* <Route path="" component={NotFound} /> */}
       </Suspense>
     </Switch>
   );
