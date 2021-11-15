@@ -42,6 +42,8 @@ const AboutUs = () => {
 
           <div className={styles.right}>
             <img
+              width=""
+              height=""
               className={styles.photo}
               src={data.aboutuses[0].photo[0].url}
               alt=""

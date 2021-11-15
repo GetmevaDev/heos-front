@@ -5,6 +5,7 @@ import { useQuery, gql } from "@apollo/client";
 
 import Logo from "../../images/logoFooter.png";
 import Rgm from "../../images/rgm.png";
+import Popup from "reactjs-popup";
 
 const REVIEWS = gql`
   query seo {
@@ -63,6 +64,7 @@ const Footer = ({ location }) => {
           </div>
           <ul className={styles.menu}>
             <h4>{data.navigation.footer[0].items[0].title}</h4>
+
             {data.navigation.footer[0].items.map(({ item, href }, index) => (
               <li key={index}>
                 <NavLink
@@ -76,6 +78,12 @@ const Footer = ({ location }) => {
                 </NavLink>
               </li>
             ))}
+            <div className={styles.salons}>
+              <ul>
+                <li>M.Salon</li>
+                <li>H.Salon</li>
+              </ul>
+            </div>
           </ul>
           <span className={styles.social}>
             <h4> {data.navigation.footer[0].social[0].title}</h4>

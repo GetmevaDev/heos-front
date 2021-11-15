@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ManhatonSalon from "./pages/ManhatonSalon";
 import HamptonSalon from "./pages/HamptonSalon";
+import NotFound from "./pages/404";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Route path="/about" component={About} />
       <Route path="/contact/manhaton" component={ManhatonSalon} />
       <Route path="/contact/hampton" component={HamptonSalon} />
+      <Route component={NotFound} />
     </Switch>
   );
 };
