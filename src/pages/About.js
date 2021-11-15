@@ -1,17 +1,24 @@
-import React from "react";
+import React, { lazy } from "react";
 
 import { Helmet } from "react-helmet";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
 import { useQuery, gql } from "@apollo/client";
 
-import Navbar from "../components/Menu/Navbar";
-import Block from "../components/Block";
-import Team from "../components/Team";
-// import Instagramm from "../components/Instagram";
-import Testimonials from "../components/Testimonials";
-import Footer from "../components/Footer";
-import Info from "../components/Information";
+// import Navbar from "../components/Menu/Navbar";
+// import Block from "../components/Block";
+// import Team from "../components/Team";
+// // import Instagramm from "../components/Instagram";
+// import Testimonials from "../components/Testimonials";
+// import Footer from "../components/Footer";
+// import Info from "../components/Information";
+
+const Navbar = lazy(() => import("../components/Menu/Navbar"));
+const Block = lazy(() => import("../components/Block"));
+const Team = lazy(() => import("../components/Team"));
+const Testimonials = lazy(() => import("../components/Testimonials"));
+const Info = lazy(() => import("../components/Information"));
+const Footer = lazy(() => import("../components/Footer"));
 
 const REVIEWS = gql`
   query seo {

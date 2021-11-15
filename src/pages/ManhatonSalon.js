@@ -1,14 +1,21 @@
-import React from "react";
+import React, { lazy } from "react";
+
 import { useQuery, gql } from "@apollo/client";
 import { Helmet } from "react-helmet";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
 
-import Navbar from "../components/Menu/Navbar";
-import Block from "../components/Block";
-import Footer from "../components/Footer";
-import MenuManhaton from "../components/HairManuManhaton";
-import MapManh from "../components/AddressMap/manh";
+// import Navbar from "../components/Menu/Navbar";
+// import Block from "../components/Block";
+// import Footer from "../components/Footer";
+// import MenuManhaton from "../components/HairManuManhaton";
+// import MapManh from "../components/AddressMap/manh";
+
+const Navbar = lazy(() => import("../components/Menu/Navbar"));
+const Block = lazy(() => import("../components/Block"));
+const MapManh = lazy(() => import("../components/AddressMap/manh"));
+const Footer = lazy(() => import("../components/Footer"));
+const MenuManhaton = lazy(() => import("../components/HairManuManhaton"));
 
 const REVIEWS = gql`
   query seo {

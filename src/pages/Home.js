@@ -1,17 +1,26 @@
-import React from "react";
+import React, { lazy } from "react";
+
 import { useQuery, gql } from "@apollo/client";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
 import { Helmet } from "react-helmet";
 
-import BlockAdress from "../components/BlockAdress";
-import AboutUs from "../components/AboutUs";
-import MeetFounders from "../components/MeetFounders";
-import Testimonials from "../components/Testimonials";
-import Info from "../components/Information";
-import Footer from "../components/Footer";
-// import Instagramm from "../components/Instagram";
-import Navbar from "../components/Menu/Navbar";
+// import BlockAdress from "../components/BlockAdress";
+// import AboutUs from "../components/AboutUs";
+// import MeetFounders from "../components/MeetFounders";
+// import Testimonials from "../components/Testimonials";
+// import Info from "../components/Information";
+// import Footer from "../components/Footer";
+// // import Instagramm from "../components/Instagram";
+// import Navbar from "../components/Menu/Navbar";
+
+const BlockAdress = lazy(() => import("../components/BlockAdress"));
+const AboutUs = lazy(() => import("../components/AboutUs"));
+const MeetFounders = lazy(() => import("../components/MeetFounders"));
+const Testimonials = lazy(() => import("../components/Testimonials"));
+const Info = lazy(() => import("../components/Information"));
+const Footer = lazy(() => import("../components/Footer"));
+const Navbar = lazy(() => import("../components/Menu/Navbar"));
 
 const REVIEWS = gql`
   query seo {
