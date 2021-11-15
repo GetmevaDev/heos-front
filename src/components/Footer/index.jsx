@@ -3,10 +3,6 @@ import { NavLink, withRouter } from "react-router-dom";
 import styles from "./style.module.css";
 import { useQuery, gql } from "@apollo/client";
 
-import Logo from "../../images/logoFooter.png";
-import Rgm from "../../images/rgm.png";
-import Popup from "reactjs-popup";
-
 const REVIEWS = gql`
   query seo {
     navigation {

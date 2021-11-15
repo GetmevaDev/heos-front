@@ -2,8 +2,6 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 
 import styles from "./style.module.css";
-import Man1 from "../../images/man1.png";
-import Man2 from "../../images/man2.png";
 
 const REVIEWS = gql`
   query meet {

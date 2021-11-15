@@ -3,8 +3,6 @@ import styles from "./style.module.css";
 import InstagramEmbed from "react-instagram-embed";
 
 import Woman from "../../images/woman.png";
-import inst from "../../images/inst.png";
-import axios from "axios";
 
 const Instagramm = () => {
   return (

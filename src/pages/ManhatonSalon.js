@@ -3,12 +3,9 @@ import { useQuery, gql } from "@apollo/client";
 import { Helmet } from "react-helmet";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
+
 import Navbar from "../components/Menu/Navbar";
-
 import Block from "../components/Block";
-
-import Manhattan from "../images/mask.jpg";
-import Map from "../components/AddressMap";
 import Footer from "../components/Footer";
 import MenuManhaton from "../components/HairManuManhaton";
 import MapManh from "../components/AddressMap/manh";

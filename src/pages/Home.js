@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
@@ -10,7 +10,7 @@ import MeetFounders from "../components/MeetFounders";
 import Testimonials from "../components/Testimonials";
 import Info from "../components/Information";
 import Footer from "../components/Footer";
-import Instagramm from "../components/Instagram";
+// import Instagramm from "../components/Instagram";
 import Navbar from "../components/Menu/Navbar";
 
 const REVIEWS = gql`

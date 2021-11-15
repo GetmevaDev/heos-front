@@ -46,8 +46,8 @@ const Info = () => {
             style={{ backgroundImage: `url(${data.infos[1].svg[0].url})` }}
           ></span>
           <h4 className={styles.infoTitle}>{data.infos[1].text}</h4>
-          {data.infos[1].clock.map(({ text }) => (
-            <ReactMarkdown>{text}</ReactMarkdown>
+          {data.infos[1].clock.map(({ text }, index) => (
+            <ReactMarkdown key={index}>{text}</ReactMarkdown>
           ))}
         </div>
 
@@ -59,8 +59,8 @@ const Info = () => {
           ></span>
 
           <h4 className={styles.infoTitle}>{data.infos[2].text}</h4>
-          {data.infos[2].clock.map(({ text }) => (
-            <ReactMarkdown>{text}</ReactMarkdown>
+          {data.infos[2].clock.map(({ text }, index) => (
+            <ReactMarkdown key={index}>{text}</ReactMarkdown>
           ))}
         </div>
       </div>

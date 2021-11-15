@@ -3,8 +3,6 @@ import styles from "./style.module.css";
 import ReactMarkdown from "react-markdown";
 import { useQuery, gql } from "@apollo/client";
 
-import Photo from "../../images/bitmap.png";
-
 const REVIEWS = gql`
   query about {
     aboutuses {
