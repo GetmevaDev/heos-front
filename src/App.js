@@ -7,12 +7,13 @@ import { css } from "@emotion/react";
 // import About from "./pages/About";
 // import ManhatonSalon from "./pages/ManhatonSalon";
 // import HamptonSalon from "./pages/HamptonSalon";
-import NotFound from "./pages/404";
+// import NotFound from "./pages/404";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const ManhatonSalon = lazy(() => import("./pages/ManhatonSalon"));
 const HamptonSalon = lazy(() => import("./pages/HamptonSalon"));
+const NotFound = lazy(() => import("./pages/404"));
 
 const App = () => {
   const override = css`

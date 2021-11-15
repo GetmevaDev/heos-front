@@ -1,16 +1,17 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 
 import { Helmet } from "react-helmet";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
 import { useQuery, gql } from "@apollo/client";
 
-// import Navbar from "../components/Menu/Navbar";
-// import Team from "../components/Team";
+import Navbar from "../components/Menu/Navbar";
+import Block from "../components/Block";
+import Team from "../components/Team";
 // import Instagramm from "../components/Instagram";
-// import Testimonials from "../components/Testimonials";
-// import Footer from "../components/Footer";
-// import Info from "../components/Information";
+import Testimonials from "../components/Testimonials";
+import Footer from "../components/Footer";
+import Info from "../components/Information";
 
 const REVIEWS = gql`
   query seo {
@@ -25,12 +26,6 @@ const REVIEWS = gql`
     }
   }
 `;
-const Block = lazy(() => import("../components/Block"));
-const Navbar = lazy(() => import("../components/Menu/Navbar"));
-const Team = lazy(() => import("../components/Team"));
-const Testimonials = lazy(() => import("../components/Testimonials"));
-const Footer = lazy(() => import("../components/Footer"));
-const Info = lazy(() => import("../components/Information"));
 
 const About = () => {
   const override = css`
