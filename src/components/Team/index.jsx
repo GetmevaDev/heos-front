@@ -28,15 +28,11 @@ const Team = () => {
     );
   };
 
-  console.log(firstSign, "first");
-  console.log(secondSign, "second");
-
   useEffect(() => {
     fetchData();
   }, []);
 
   if (loading) return <div></div>;
-  console.log(secondSign);
 
   return (
     <div className="container">

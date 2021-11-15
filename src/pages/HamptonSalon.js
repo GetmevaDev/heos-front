@@ -33,7 +33,6 @@ const HamptonSalon = () => {
   `;
 
   const { loading, error, data } = useQuery(REVIEWS);
-  console.log(data);
 
   if (loading)
     return (

@@ -42,7 +42,6 @@ const REVIEWS = gql`
 const Footer = ({ location }) => {
   const { loading, error, data } = useQuery(REVIEWS);
 
-  console.log(data);
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
 

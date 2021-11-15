@@ -25,7 +25,6 @@ const Map = () => {
 
   if (loading) return <p>loadng</p>;
   if (error) return <p>error</p>;
-  console.log(data);
 
   return (
     <div className="container">

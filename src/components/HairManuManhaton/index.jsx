@@ -37,7 +37,6 @@ const MenuManhaton = () => {
             <div className={styles.menuInner}>
               {data.manhatonMenus.slice(0, 5).map((item, index) => (
                 <div className={styles.left} key={index}>
-                  {console.log(item.manhatoMenu, "itenms")}
                   <h2>{item.manhatoMenu.title}</h2>
                   <h3>{item.manhatoMenu.price}</h3>
                   <div className={styles.price}>

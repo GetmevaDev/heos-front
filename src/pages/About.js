@@ -36,7 +36,6 @@ const About = () => {
   `;
 
   const { loading, error, data } = useQuery(REVIEWS);
-  console.log(data);
 
   if (loading)
     return (
@@ -46,7 +45,6 @@ const About = () => {
     );
   if (error) return <p>error {JSON.stringify(error)}</p>;
 
-  console.log(loading);
   return (
     <div>
       <Helmet>
