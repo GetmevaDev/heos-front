@@ -47,6 +47,10 @@
     align-items: center;
   }
 
+  .titleTeam {
+    text-align: center;
+  }
+
   .card {
     padding-left: 0;
   }

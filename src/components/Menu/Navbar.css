@@ -6,8 +6,13 @@
 }
 
 .rightSearch input {
+  display: none;
   border: none;
   outline: none;
+}
+
+.fas.fa-search {
+  display: none;
 }
 
 .rightSearch {
@@ -178,7 +183,7 @@
     display: block;
   }
   .rightSearch-mobile {
-    display: block;
+    display: none;
     margin-top: 100px;
   }
 

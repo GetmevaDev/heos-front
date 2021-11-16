@@ -61,7 +61,7 @@ const Footer = ({ location }) => {
             <h4>{data.navigation.footer[0].items[0].title}</h4>
 
             {data.navigation.footer[0].items.map(({ item, href }, index) => (
-              <li key={index}>
+              <li key={index} className={styles.list}>
                 <NavLink
                   className={styles.link}
                   to={href}

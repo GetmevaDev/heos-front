@@ -87,6 +87,8 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
   .info {
+    margin-top: 30px;
+    margin-bottom: 30px;
     flex-direction: column;
     align-items: center;
   }
@@ -95,6 +97,8 @@
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .info {
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
     flex-direction: column;
   }
   .address,
@@ -105,6 +109,8 @@
 
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .info {
+    margin-top: 30px;
+    margin-bottom: 30px;
     align-items: center;
     flex-direction: column;
   }

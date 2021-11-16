@@ -29,6 +29,9 @@
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
+  .block {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 300px) and (max-width: 479px) {
