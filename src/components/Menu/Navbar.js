@@ -93,18 +93,6 @@ function Navbar({ location }) {
               {data.navigation?.header[1].item}
             </NavLink>
           </li>
-          {/* <li className="nav-item">
-            <NavLink
-              to="/services"
-              activeClassName={
-                location.pathname === "/services" ? "linkActive" : ""
-              }
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
-              {data.navigation?.header[2].item}
-            </NavLink>
-          </li> */}
           <li
             className="nav-item"
             onMouseEnter={onMouseEnter}

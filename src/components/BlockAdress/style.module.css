@@ -122,11 +122,11 @@
 
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .blockimg {
-    top: 30%;
+    top: 23%;
   }
   .location {
-    top: 45%;
-    left: 38%;
+    top: 40%;
+    left: 25%;
   }
 
   .blockAddress p {

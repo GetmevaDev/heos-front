@@ -1,5 +1,4 @@
 import React, { lazy, memo } from "react";
-
 import { Helmet } from "react-helmet";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
@@ -34,7 +33,7 @@ const REVIEWS = gql`
   }
 `;
 
-const About = memo(() => {
+const About = () => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -76,6 +75,6 @@ const About = memo(() => {
       <Footer />
     </div>
   );
-});
+};
 
-export default About;
+export default memo(About);

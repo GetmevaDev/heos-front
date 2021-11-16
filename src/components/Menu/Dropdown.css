@@ -37,7 +37,12 @@
 }
 
 @media screen and (max-width: 960px) {
-  .fa-caret-down {
-    display: none;
+  .fas.fa-caret-down {
+    display: block;
+  }
+
+  .dropdown-menu {
+    right: 294px;
+    top: 341px;
   }
 }

@@ -31,7 +31,7 @@ const REVIEWS = gql`
   }
 `;
 
-const ManhatonSalon = memo(() => {
+const ManhatonSalon = () => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -64,6 +64,6 @@ const ManhatonSalon = memo(() => {
       <Footer />
     </div>
   );
-});
+};
 
-export default ManhatonSalon;
+export default memo(ManhatonSalon);

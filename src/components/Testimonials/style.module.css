@@ -95,6 +95,10 @@
     margin-bottom: 0;
   }
 
+  .card {
+   margin-left: 0;
+  }
+
   .arrows {
     display: none;
   }

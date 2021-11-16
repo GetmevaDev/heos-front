@@ -6,12 +6,6 @@ import { Helmet } from "react-helmet-async";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
 
-// import Navbar from "../components/Menu/Navbar";
-// import Block from "../components/Block";
-// import Map from "../components/AddressMap";
-// import Footer from "../components/Footer";
-// import MenuHampton from "../components/HairMenuHampton";
-
 const Navbar = lazy(() => import("../components/Menu/Navbar"));
 const Block = lazy(() => import("../components/Block"));
 const Map = lazy(() => import("../components/AddressMap"));
@@ -32,7 +26,7 @@ const REVIEWS = gql`
   }
 `;
 
-const HamptonSalon = memo(() => {
+const HamptonSalon = () => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -70,6 +64,6 @@ const HamptonSalon = memo(() => {
       <Footer />{" "}
     </>
   );
-});
+};
 
-export default HamptonSalon;
+export default memo(HamptonSalon);

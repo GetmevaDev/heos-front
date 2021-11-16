@@ -32,7 +32,7 @@ const REVIEWS = gql`
   }
 `;
 
-const Home = memo(() => {
+const Home = () => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -48,7 +48,7 @@ const Home = memo(() => {
       </p>
     );
   if (error) return <p>error {JSON.stringify(error)}</p>;
-
+  console.log("home");
   return (
     <div>
       <Helmet>
@@ -65,6 +65,6 @@ const Home = memo(() => {
       <Footer />
     </div>
   );
-});
+};
 
-export default Home;
+export default memo(Home);

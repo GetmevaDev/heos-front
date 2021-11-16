@@ -90,7 +90,7 @@ const Footer = ({ location }) => {
             <p>
               {data.navigation.footer[0].Contact[1].text}
               <b>{data.navigation.footer[0].Contact[1].textColor}</b> <br />
-              {data.navigation.footer[0].Contact[2].text}{" "}
+              {data.navigation.footer[0].Contact[2].text}
               <b>{data.navigation.footer[0].Contact[2].textColor}</b>
             </p>
           </div>
