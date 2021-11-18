@@ -1,4 +1,5 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
+import WebFont from 'webfontloader';
 import { Switch, Route } from "react-router-dom";
 import ClipLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
@@ -11,6 +12,15 @@ const HamptonSalon = lazy(() => import("./pages/HamptonSalon"));
 const NotFound = lazy(() => import("./pages/404"));
 
 const App = () => {
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['DM Sans:400, 500, 700'],
+      }
+    });
+   }, []);
+  
   const override = css`
     display: block;
     margin: 0 auto;
