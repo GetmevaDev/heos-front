@@ -10,7 +10,7 @@
 }
 
 .blockAddress p {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   font-size: 25px;
   line-height: 33px;
@@ -42,7 +42,7 @@
 }
 
 .leftBlock {
-  content: "";
+  content: '';
   position: relative;
   /* background-image: url('../../images/leftblock.png'); */
   background-repeat: no-repeat;
@@ -66,7 +66,7 @@
 }
 
 .rightBlock {
-  content: "";
+  content: '';
   position: relative;
   /* background-image: url('../../images/rightblock.png'); */
   background-repeat: no-repeat;
@@ -87,7 +87,7 @@
   position: absolute;
   top: 75%;
   left: 50%;
-  width: 27.5vw;
+  width: 26.5vw;
   transform: translate(-50%, -50%);
 }
 

@@ -3,6 +3,7 @@
 }
 
 .title {
+  font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   font-size: 60px;
   line-height: 80px;
@@ -18,7 +19,7 @@
 }
 
 .ceneterMeetLogo {
-  content: "";
+  content: '';
   width: 528px;
   position: absolute;
   z-index: 5;
@@ -34,7 +35,7 @@
 }
 
 .name {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   padding-top: 22px;
   font-weight: bold;
   font-size: 35px;

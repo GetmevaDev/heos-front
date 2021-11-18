@@ -118,7 +118,7 @@ const Testimonials = () => {
                     />
                     <div className={styles.nameInner}>
                       <h5>{item.name}</h5>
-                      <span>★★★★★</span>
+                      <span style={{color: "#FBB040"}}>★★★★★</span>
                     </div>
                   </div>
                   <div className={styles.cardText}>{item.desc}</div>

@@ -11,6 +11,11 @@
   outline: none;
 }
 
+.nav-links svg {
+  position: relative;
+  top: 2px;
+}
+
 .fas.fa-search {
   display: none;
 }
@@ -59,7 +64,7 @@
 }
 
 .nav-links {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 23px;

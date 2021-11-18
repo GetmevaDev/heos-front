@@ -5,6 +5,9 @@ import { useQuery, gql } from "@apollo/client";
 import "./Navbar.css";
 import Dropdown from "./Dropdown";
 import Logo from "../../images/logo.png";
+import { AiFillCaretDown } from "react-icons/ai";
+
+
 
 const REVIEWS = gql`
   query menu {
@@ -107,7 +110,7 @@ function Navbar({ location }) {
               onClick={closeMobileMenu}
             >
               {data.navigation?.header[2].item}
-              <i className="fas fa-caret-down" />
+              <AiFillCaretDown/>
               {dropdown && <Dropdown data={data} />}
             </NavLink>
           </li>

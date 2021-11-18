@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['DM Sans:400, 500, 700'],
+        families: ['DM Sans:400, 500, 700', 'sans-serif'],
       }
     });
    }, []);
