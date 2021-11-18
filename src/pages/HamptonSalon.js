@@ -1,16 +1,17 @@
-import React, { lazy, memo } from "react";
+import React, { lazy, memo } from 'react';
+import LazyLoad from 'react-lazyload';
 
-import { useQuery, gql } from "@apollo/client";
-import { Helmet } from "react-helmet-async";
+import { useQuery, gql } from '@apollo/client';
+import { Helmet } from 'react-helmet-async';
 
-import ClipLoader from "react-spinners/HashLoader";
-import { css } from "@emotion/react";
+import ClipLoader from 'react-spinners/HashLoader';
+import { css } from '@emotion/react';
 
-const Navbar = lazy(() => import("../components/Menu/Navbar"));
-const Block = lazy(() => import("../components/Block"));
-const Map = lazy(() => import("../components/AddressMap"));
-const Footer = lazy(() => import("../components/Footer"));
-const MenuHampton = lazy(() => import("../components/HairMenuHampton"));
+const Navbar = lazy(() => import('../components/Menu/Navbar'));
+const Block = lazy(() => import('../components/Block'));
+const Map = lazy(() => import('../components/AddressMap'));
+const Footer = lazy(() => import('../components/Footer'));
+const MenuHampton = lazy(() => import('../components/HairMenuHampton'));
 
 const REVIEWS = gql`
   query seo {
@@ -55,13 +56,10 @@ const HamptonSalon = () => {
           <meta property="og:title" content="A very important title" /> */}
       </Helmet>
       <Navbar />
-      <Block
-        title={data.hamptonSalon.ham.title}
-        img={data.hamptonSalon.ham.bg[0].url}
-      />
+      <Block title={data.hamptonSalon.ham.title} img={data.hamptonSalon.ham.bg[0].url} />
       <Map />
       <MenuHampton />
-      <Footer />{" "}
+      <Footer />{' '}
     </>
   );
 };

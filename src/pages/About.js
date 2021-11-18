@@ -1,23 +1,16 @@
-import React, { lazy, memo } from "react";
-import { Helmet } from "react-helmet";
-import ClipLoader from "react-spinners/HashLoader";
-import { css } from "@emotion/react";
-import { useQuery, gql } from "@apollo/client";
+import React, { lazy, memo } from 'react';
+import { Helmet } from 'react-helmet';
+import ClipLoader from 'react-spinners/HashLoader';
+import { css } from '@emotion/react';
+import { useQuery, gql } from '@apollo/client';
+import LazyLoad from 'react-lazyload';
 
-// import Navbar from "../components/Menu/Navbar";
-// import Block from "../components/Block";
-// import Team from "../components/Team";
-// // import Instagramm from "../components/Instagram";
-// import Testimonials from "../components/Testimonials";
-// import Footer from "../components/Footer";
-// import Info from "../components/Information";
-
-const Navbar = lazy(() => import("../components/Menu/Navbar"));
-const Block = lazy(() => import("../components/Block"));
-const Team = lazy(() => import("../components/Team"));
-const Testimonials = lazy(() => import("../components/Testimonials"));
-const Info = lazy(() => import("../components/Information"));
-const Footer = lazy(() => import("../components/Footer"));
+const Navbar = lazy(() => import('../components/Menu/Navbar'));
+const Block = lazy(() => import('../components/Block'));
+const Team = lazy(() => import('../components/Team'));
+const Testimonials = lazy(() => import('../components/Testimonials'));
+const Info = lazy(() => import('../components/Information'));
+const Footer = lazy(() => import('../components/Footer'));
 
 const REVIEWS = gql`
   query seo {
@@ -52,28 +45,36 @@ const About = () => {
   if (error) return <p>error {JSON.stringify(error)}</p>;
 
   return (
-    <div>
+    <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{data.aboutseo.aboutSeo.seo}</title>
       </Helmet>
-      <Navbar />
 
-      <Block
-        title={data.aboutseo.aboutSeo.title}
-        img={data.aboutseo.aboutSeo.bg[0].url}
-      />
+      <LazyLoad>
+        <Navbar />
+      </LazyLoad>
+      <LazyLoad>
+        <Block title={data.aboutseo.aboutSeo.title} img={data.aboutseo.aboutSeo.bg[0].url} />
+      </LazyLoad>
 
-      <Team />
+      <LazyLoad>
+        <Team />
+      </LazyLoad>
 
+      <LazyLoad>
+        <Testimonials />
+      </LazyLoad>
       {/* <Instagramm />   */}
 
-      <Testimonials />
+      <LazyLoad>
+        <Info />
+      </LazyLoad>
 
-      <Info />
-
-      <Footer />
-    </div>
+      <LazyLoad>
+        <Footer />
+      </LazyLoad>
+    </>
   );
 };
 

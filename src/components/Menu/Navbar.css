@@ -5,6 +5,10 @@
   justify-content: space-between;
 }
 
+.navbar-logo img {
+  display: inline;
+}
+
 .rightSearch input {
   display: none;
   border: none;

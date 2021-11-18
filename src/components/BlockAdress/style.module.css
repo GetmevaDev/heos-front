@@ -20,10 +20,29 @@
   color: #ffffff;
   text-shadow: 0 6px 21px #000000;
 }
+
+.btnLeft {
+  font-family: 'Dm Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+  padding: 18px 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #d1a068;
+  border-radius: 5px;
+  position: absolute;
+  top: 80%;
+  width: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .location {
   position: absolute;
   width: 100px;
-  top: 50%;
+  top: 35%;
   left: 45%;
   object-fit: cover;
   height: 100px;
@@ -54,7 +73,7 @@
 
 .leftBlock p {
   position: absolute;
-  top: 75%;
+  top: 65%;
   left: 50%;
   width: 23.5vw;
   transform: translate(-50%, -50%);
@@ -85,7 +104,7 @@
 
 .rightBlock p {
   position: absolute;
-  top: 75%;
+  top: 65%;
   left: 50%;
   width: 26.5vw;
   transform: translate(-50%, -50%);
@@ -105,6 +124,16 @@
     top: 45%;
     left: 38%;
   }
+
+  .leftBlock p {
+    top: 80%;
+    left: 50%;
+  }
+
+  .rightBlock p {
+    top: 80%;
+    left: 50%;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -112,11 +141,26 @@
     top: 25%;
   }
   .location {
-    top: 45%;
-    left: 38%;
+    top: 50%;
+    left: 35%;
   }
+
   .blockAddress p {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .leftBlock p {
+    top: 80%;
+    left: 50%;
+  }
+
+  .rightBlock p {
+    top: 80%;
+    left: 50%;
+  }
+
+  .btnLeft {
+    display: block;
   }
 }
 
@@ -125,11 +169,25 @@
     top: 23%;
   }
   .location {
-    top: 40%;
-    left: 25%;
+    top: 50%;
+    left: 35%;
   }
 
   .blockAddress p {
     font-size: 15px;
+  }
+
+  .leftBlock p {
+    top: 80%;
+    left: 55%;
+  }
+
+  .rightBlock p {
+    top: 80%;
+    left: 55%;
+  }
+
+  .btnLeft {
+    display: block;
   }
 }

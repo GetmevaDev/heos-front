@@ -37,7 +37,7 @@ const Team = () => {
   return (
     <div className="container">
       <div className={styles.teamManhattan}>
-        <h1 className={styles.titleTeam}>{firstSign[0].title}</h1>
+        {/* <h1 className={styles.titleTeam}>{firstSign[0].title}</h1> */}
         <div className={styles.cards}>
           {firstSign.map((item) => (
             <div className={styles.card} key={item.id}>
@@ -49,7 +49,7 @@ const Team = () => {
         </div>
       </div>
 
-      <div className={styles.teamHampton}>
+      {/* <div className={styles.teamHampton}>
         <h1 className={styles.titleTeam}>{secondSign[0].title}</h1>
         <div className={styles.cards}>
           {secondSign.map((item) => (
@@ -60,7 +60,7 @@ const Team = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

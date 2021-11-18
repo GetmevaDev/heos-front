@@ -1,7 +1,8 @@
-import React from "react";
-import { useQuery, gql } from "@apollo/client";
+import React from 'react';
+import { useQuery, gql } from '@apollo/client';
 
-import styles from "./style.module.css";
+import styles from './style.module.css';
+import { Link } from 'react-router-dom';
 
 const REVIEWS = gql`
   query Team {
@@ -28,34 +29,32 @@ const BlockAdress = () => {
 
   return (
     <div className={styles.blockAddress}>
-      <img
-        className={styles.blockimg}
-        src={data.blockAddresses[0].centerlogo[0].url}
-        alt=""
-      />
+      <img className={styles.blockimg} src={data.blockAddresses[0].centerlogo[0].url} alt="" />
       <div
         className={styles.leftBlock}
-        style={{ backgroundImage: `url(${data.blockAddresses[0].bg[0].url})` }}
-      >
+        style={{ backgroundImage: `url(${data.blockAddresses[0].bg[0].url})` }}>
         <span
           className={styles.location}
           style={{
             backgroundImage: `url(${data.blockAddresses[0].location[0].url})`,
-          }}
-        ></span>
+          }}></span>
         <p>{data.blockAddresses[0].desc}</p>
+        <Link to="/contact/manhaton">
+          <button className={styles.btnLeft}>MAKE AN APPOINTMENT</button>
+        </Link>
       </div>
       <div
         className={styles.rightBlock}
-        style={{ backgroundImage: `url(${data.blockAddresses[1].bg[0].url})` }}
-      >
+        style={{ backgroundImage: `url(${data.blockAddresses[1].bg[0].url})` }}>
         <span
           className={styles.location}
           style={{
             backgroundImage: `url(${data.blockAddresses[1].location[0].url})`,
-          }}
-        ></span>
+          }}></span>
         <p>{data.blockAddresses[1].desc}</p>
+        <Link to="/contact/hampton">
+          <button className={styles.btnLeft}>MAKE AN APPOINTMENT</button>
+        </Link>
       </div>
     </div>
   );
