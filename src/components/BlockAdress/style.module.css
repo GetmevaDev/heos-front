@@ -117,22 +117,29 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
   .blockimg {
-    top: 25%;
+    top: 23%;
   }
-
   .location {
     top: 45%;
-    left: 38%;
+    left: 35%;
   }
 
   .leftBlock p {
-    top: 80%;
-    left: 50%;
+    width: 100%;
+    padding-right: 20px;
+    top: 75%;
+    left: 55%;
   }
 
   .rightBlock p {
-    top: 80%;
+    width: 100%;
+    top: 75%;
     left: 50%;
+  }
+
+  .btnLeft {
+    display: block;
+    top: 90%;
   }
 }
 
@@ -141,7 +148,7 @@
     top: 25%;
   }
   .location {
-    top: 50%;
+    top: 46%;
     left: 35%;
   }
 
@@ -150,17 +157,19 @@
   }
 
   .leftBlock p {
-    top: 80%;
+    top: 75%;
     left: 50%;
   }
 
   .rightBlock p {
-    top: 80%;
+    top: 75%;
     left: 50%;
   }
 
   .btnLeft {
+    width: 80%;
     display: block;
+    top: 90%;
   }
 }
 
@@ -169,7 +178,7 @@
     top: 23%;
   }
   .location {
-    top: 50%;
+    top: 45%;
     left: 35%;
   }
 
@@ -178,16 +187,22 @@
   }
 
   .leftBlock p {
-    top: 80%;
+    width: 100%;
+    padding-right: 20px;
+    top: 75%;
     left: 55%;
   }
 
   .rightBlock p {
-    top: 80%;
+    top: 75%;
+    width: 100%;
+
     left: 55%;
   }
 
   .btnLeft {
+    width: 100%;
     display: block;
+    top: 90%;
   }
 }

@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { Link, NavLink, withRouter } from "react-router-dom";
-import { useQuery, gql } from "@apollo/client";
+import React, { useState } from 'react';
+import { Link, NavLink, withRouter } from 'react-router-dom';
+import { useQuery, gql } from '@apollo/client';
 
-import "./Navbar.css";
-import Dropdown from "./Dropdown";
-import Logo from "../../images/logo.png";
-import { AiFillCaretDown } from "react-icons/ai";
-
-
+import './Navbar.css';
+import Dropdown from './Dropdown';
+import Logo from '../../images/logo.png';
+import { AiFillCaretDown } from 'react-icons/ai';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { GrClose } from 'react-icons/gr';
 
 const REVIEWS = gql`
   query menu {
@@ -62,55 +62,41 @@ function Navbar({ location }) {
           <i className="fab fa-firstdraft" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          {click ? <GrClose /> : <GiHamburgerMenu />}
+          {/* <i className={click ? 'fas fa-times' : 'fas fa-bars'} /> */}
         </div>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
-            <NavLink
-              to="/"
-              className="navbar-logo-mobile"
-              onClick={closeMobileMenu}
-            >
+            <NavLink to="/" className="navbar-logo-mobile" onClick={closeMobileMenu}>
               <img src={Logo} alt="Logo" />
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink
               to="/"
-              activeClassName={location.pathname === "/" ? "linkActive" : ""}
+              activeClassName={location.pathname === '/' ? 'linkActive' : ''}
               className="nav-links"
-              onClick={closeMobileMenu}
-            >
+              onClick={closeMobileMenu}>
               {data.navigation?.header[0].item}
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink
               to="/about"
-              activeClassName={
-                location.pathname === "/about" ? "linkActive" : ""
-              }
+              activeClassName={location.pathname === '/about' ? 'linkActive' : ''}
               className="nav-links"
-              onClick={closeMobileMenu}
-            >
+              onClick={closeMobileMenu}>
               {data.navigation?.header[1].item}
             </NavLink>
           </li>
-          <li
-            className="nav-item"
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          >
+          <li className="nav-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <NavLink
               to="/#"
-              activeClassName={
-                location.pathname === "/contact" ? "linkActive" : ""
-              }
+              activeClassName={location.pathname === '/contact' ? 'linkActive' : ''}
               className="nav-links"
-              onClick={closeMobileMenu}
-            >
+              onClick={closeMobileMenu}>
               {data.navigation?.header[2].item}
-              <AiFillCaretDown/>
+              <AiFillCaretDown />
               {dropdown && <Dropdown data={data} />}
             </NavLink>
           </li>
