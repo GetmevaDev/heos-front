@@ -56,7 +56,7 @@
   margin-top: 30px;
   padding-top: 30px;
   padding-bottom: 15px;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   font-size: 25px;
   line-height: 33px;
@@ -64,7 +64,7 @@
 }
 
 .info p {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 17px;
   line-height: 35px;
@@ -78,7 +78,9 @@
 }
 
 .address p {
+  font-family: 'DM Sans', sans-serif;
   color: #333333;
+  font-weight: 600;
 }
 
 .info p b {

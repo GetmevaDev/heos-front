@@ -10,7 +10,11 @@
 }
 
 .logoLeft {
-  flex: 3;
+  flex: 4;
+}
+
+.logoLeft p {
+  padding-top: 20px;
 }
 
 .menu {
@@ -19,7 +23,7 @@
 
 .link {
   text-decoration: none;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
@@ -52,11 +56,15 @@
 }
 
 .social {
-  flex: 2;
+  flex: 3;
 }
 
 .contact {
-  flex: 3;
+  flex: 5;
+}
+
+.contact p {
+  padding-top: 11px;
 }
 
 .contact p b {
@@ -64,13 +72,16 @@
 }
 
 .logoRight {
-  padding-top: 55px;
+  padding-top: 40px;
   padding-left: 70px;
-  flex: 3;
+  flex: 4;
 }
 
 .logoRight span {
   color: #fff;
+  padding-top: 12px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .logoRight span b {
@@ -78,18 +89,17 @@
 }
 
 .footer p {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
-  padding-top: 20px;
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 15px;
+  line-height: 20px;
   letter-spacing: 0.1px;
   color: #ffffff;
 }
 
 .footer h4 {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   font-size: 20px;
   line-height: 35px;

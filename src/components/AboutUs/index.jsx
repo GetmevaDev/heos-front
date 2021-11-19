@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./style.module.css";
-import ReactMarkdown from "react-markdown";
-import { useQuery, gql } from "@apollo/client";
+import React from 'react';
+import styles from './style.module.css';
+import ReactMarkdown from 'react-markdown';
+import { useQuery, gql } from '@apollo/client';
 
 const REVIEWS = gql`
   query about {
@@ -33,9 +33,7 @@ const AboutUs = () => {
               <strong>{data.aboutuses[0].textColor}</strong>
             </h1>
             <p className={styles.desc}>{data.aboutuses[0].desc}</p>
-            <span className={styles.moreAbout}>
-              {data.aboutuses[0].moreabout}
-            </span>
+            <span className={styles.moreAbout}>{data.aboutuses[0].moreabout}</span>
           </div>
 
           <div className={styles.right}>

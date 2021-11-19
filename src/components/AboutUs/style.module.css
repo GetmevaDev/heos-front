@@ -47,10 +47,16 @@
   font-weight: 300;
 }
 
+.title p {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+}
+
 .title strong {
   font-weight: bold;
   font-size: 64px;
-
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
   line-height: 29px;
   letter-spacing: 0.5px;
   color: #d1a068;

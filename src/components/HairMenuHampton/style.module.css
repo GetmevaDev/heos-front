@@ -1,11 +1,11 @@
 .menuHampton {
-  padding-top: 60px;
+  padding-top: 90px;
   padding-bottom: 90px;
   background: #222222;
 }
 
 .menuHamptonTwo {
-  padding-top: 60px;
+  padding-top: 90px;
   padding-bottom: 80px;
   background: #333333;
 }
@@ -20,7 +20,16 @@
 }
 
 .left {
+  margin-top: 32px;
+}
+
+.pricesMay {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 30px;
   margin-top: 30px;
+  color: #ffffff;
 }
 
 .menuInner {
@@ -29,15 +38,16 @@
 }
 
 .left h3 {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 30px;
   position: absolute;
   line-height: 25px;
+  padding-top: 8px;
   color: #ffffff;
 }
 
 .left h3:after {
-  content: "";
+  content: '';
   width: 100px;
   top: 25px;
   display: block;
@@ -48,7 +58,7 @@
 }
 
 .left p {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 20px;
   line-height: 30px;
   padding-top: 5px;
@@ -61,11 +71,10 @@
   min-width: 480px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 68px;
 }
 
 .pricesLeft {
-  padding-top: 5px;
 }
 
 .pricesRight {
@@ -73,7 +82,7 @@
 }
 
 .menu h2 {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   font-size: 40px;
   line-height: 52px;
@@ -81,7 +90,7 @@
 }
 
 .right h1 {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 
   font-style: normal;
   font-weight: bold;
@@ -152,7 +161,7 @@
   }
 
   .left p {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .pricesLeft {

@@ -1,26 +1,25 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from 'react';
 import WebFont from 'webfontloader';
-import { Switch, Route } from "react-router-dom";
-import ClipLoader from "react-spinners/HashLoader";
-import { css } from "@emotion/react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Switch, Route } from 'react-router-dom';
+import ClipLoader from 'react-spinners/HashLoader';
+import { css } from '@emotion/react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
-const ManhatonSalon = lazy(() => import("./pages/ManhatonSalon"));
-const HamptonSalon = lazy(() => import("./pages/HamptonSalon"));
-const NotFound = lazy(() => import("./pages/404"));
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const ManhatonSalon = lazy(() => import('./pages/ManhatonSalon'));
+const HamptonSalon = lazy(() => import('./pages/HamptonSalon'));
+const NotFound = lazy(() => import('./pages/404'));
 
 const App = () => {
-
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['DM Sans:400, 500, 700', 'sans-serif'],
-      }
+        families: ['DM Sans:300, 400, 500, 700', 'sans-serif'],
+      },
     });
-   }, []);
-  
+  }, []);
+
   const override = css`
     display: block;
     margin: 0 auto;
@@ -35,8 +34,7 @@ const App = () => {
           <h1>
             <ClipLoader css={override} size={120} />
           </h1>
-        }
-      >
+        }>
         <HelmetProvider>
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} />

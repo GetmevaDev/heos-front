@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink, withRouter } from "react-router-dom";
-import styles from "./style.module.css";
-import { useQuery, gql } from "@apollo/client";
+import React from 'react';
+import { NavLink, withRouter } from 'react-router-dom';
+import styles from './style.module.css';
+import { useQuery, gql } from '@apollo/client';
 
 const REVIEWS = gql`
   query seo {
@@ -65,10 +65,7 @@ const Footer = ({ location }) => {
                 <NavLink
                   className={styles.link}
                   to={href}
-                  activeClassName={
-                    location.pathname === href ? styles.active : styles.link
-                  }
-                >
+                  activeClassName={location.pathname === href ? styles.active : styles.link}>
                   {item}
                 </NavLink>
               </li>
@@ -82,14 +79,18 @@ const Footer = ({ location }) => {
           </ul>
           <span className={styles.social}>
             <h4> {data.navigation.footer[0].social[0].title}</h4>
-            <img src={data.navigation.footer[0].social[0].icon[0].url} alt="" />
+            <img
+              src={data.navigation.footer[0].social[0].icon[0].url}
+              alt=""
+              style={{ paddingTop: 5 }}
+            />
           </span>
           <div className={styles.contact}>
             <h4> {data.navigation.footer[0].Contact[0].title}</h4>
             <p>{data.navigation.footer[0].Contact[0].text}</p>
             <p>
               {data.navigation.footer[0].Contact[1].text}
-              <b>{data.navigation.footer[0].Contact[1].textColor}</b> <br />
+              <b> {data.navigation.footer[0].Contact[1].textColor}</b> <br />
               {data.navigation.footer[0].Contact[2].text}
               <b>{data.navigation.footer[0].Contact[2].textColor}</b>
             </p>

@@ -1,7 +1,7 @@
-import React from "react";
-import { useQuery, gql } from "@apollo/client";
+import React from 'react';
+import { useQuery, gql } from '@apollo/client';
 
-import styles from "./style.module.css";
+import styles from './style.module.css';
 
 const REVIEWS = gql`
   query menu {
@@ -122,12 +122,14 @@ const MenuHampton = () => {
                   </div>
                 </div>
               ))}
+              <span className={styles.pricesMay}>
+                *Prices may vary depending on length and thickness of hair.
+              </span>
             </div>
 
             <div className={styles.right}>
               <h1>
-                {data.hamptonMenus[7].title}{" "}
-                <p>{data.hamptonMenus[7].textColor} </p>
+                {data.hamptonMenus[7].title} <p>{data.hamptonMenus[7].textColor} </p>
               </h1>
             </div>
           </div>
