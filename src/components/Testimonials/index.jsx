@@ -40,38 +40,6 @@ const Testimonials = () => {
       <div className="container">
         <div className={styles.testimonialsInner}>
           <h1 className={styles.title}>Testimonials</h1>
-          {/* <div className={styles.arrows}>
-            <svg
-              className="leftArrrow"
-              width="16"
-              height="28"
-              viewBox="0 0 16 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M14 26L2 14L14 2"
-                stroke="#c4c4c4"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <svg
-              className="rightArrow"
-              width="16"
-              height="28"
-              viewBox="0 0 16 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M2 26L14 14L2 2"
-                stroke="#D1A068"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div> */}
         </div>
         <div className={styles.cards}>
           <Carousel breakPoints={breakPoints}>

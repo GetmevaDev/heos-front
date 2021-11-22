@@ -56,15 +56,19 @@ a {
 .rec.rec-arrow-left {
   position: relative;
   top: -200px;
-  left: 1130px;
+  left: 1080px;
+}
+
+.jRFJkP {
+  background: none !important;
 }
 
 .rec.rec-arrow-left:enabled {
-  color: #d1a068;
+  color: #d1a068 !important;
 }
 
 .rec.rec-arrow-right:enabled {
-  color: #d1a068;
+  color: #d1a068 !important;
 }
 
 .jRFJkP {
@@ -87,6 +91,7 @@ a {
 .rec.rec-arrow-right {
   position: relative;
   top: -200px;
+  right: 50px;
 }
 
 ul[class],
