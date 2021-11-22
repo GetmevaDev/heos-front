@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useQuery, gql } from '@apollo/client';
-import Carousel from 'react-elastic-carousel';
 
 import styles from './style.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,12 +27,6 @@ const Testimonials = () => {
 
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
-  const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-    { width: 768, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 3 },
-  ];
 
   return (
     <div className={styles.testimonials}>
@@ -74,20 +67,56 @@ const Testimonials = () => {
           </div>
         </div>
         <div className={styles.cards}>
-          <Carousel breakPoints={breakPoints} infiniteLoop={true}>
+          <Swiper
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 30,
+                pagination: false,
+                slidesPerGroup: 1,
+              },
+
+              768: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 30,
+                slidesPerGroup: 1,
+              },
+
+              1200: {
+                slidesPerView: 3,
+                spaceBetweenSlides: 40,
+                slidesPerGroup: 3,
+                freeMode: true,
+                navigation: {
+                  prevEl: '.leftArrow', // arrows on the side of the slides
+                  nextEl: '.rightArrow', // arrows on the side of the slides
+                },
+              },
+            }}
+            slidesPerView={3}
+            spaceBetween={30}
+            keyboard={true}
+            className="mySwiper"
+            slidesPerGroup={3}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            grabCursor={true}
+            className="mySwiper">
             {data.testimonials.map((item) => (
-              <div className={styles.card}>
-                <div className={styles.cardInner}>
-                  <img className={styles.cardImg} src={item.photo[0].url} alt="" />
-                  <div className={styles.nameInner}>
-                    <h5>{item.name}</h5>
-                    <span style={{ color: '#FBB040' }}>★★★★★</span>
+              <SwiperSlide key={item.id}>
+                <div className={styles.card}>
+                  <div className={styles.cardInner}>
+                    <img className={styles.cardImg} src={item.photo[0].url} alt="" />
+                    <div className={styles.nameInner}>
+                      <h5>{item.name}</h5>
+                      <span style={{ color: '#FBB040' }}>★★★★★</span>
+                    </div>
                   </div>
+                  <div className={styles.cardText}>{item.desc}</div>
                 </div>
-                <div className={styles.cardText}>{item.desc}</div>
-              </div>
+              </SwiperSlide>
             ))}
-          </Carousel>
+          </Swiper>
         </div>
       </div>
     </div>

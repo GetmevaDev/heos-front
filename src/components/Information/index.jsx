@@ -24,6 +24,8 @@ const Info = () => {
 
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
+
+  console.log(data);
   return (
     <div className="container">
       <div className={styles.info}>
@@ -54,11 +56,13 @@ const Info = () => {
             style={{ backgroundImage: `url(${data.infos[2].svg[0].url})` }}></span>
 
           <h4 className={styles.infoTitle}>{data.infos[2].text}</h4>
-          {data.infos[2].clock.map(({ text }, index) => (
-            <a href="">
-              <ReactMarkdown key={index}>{text}</ReactMarkdown>
-            </a>
-          ))}
+          <a href="tel:631-537-8000">
+            <ReactMarkdown>{data.infos[2].clock[0].text}</ReactMarkdown>
+          </a>
+
+          <a href="tel:212-837-1014">
+            <ReactMarkdown>{data.infos[2].clock[1].text}</ReactMarkdown>
+          </a>
         </div>
       </div>
     </div>

@@ -5,10 +5,12 @@ import { css } from '@emotion/react';
 import { useQuery, gql } from '@apollo/client';
 import LazyLoad from 'react-lazyload';
 
+// import Carousel from '../components/Testimonials/Carousel';
+
 const Navbar = lazy(() => import('../components/Menu/Navbar'));
 const Block = lazy(() => import('../components/Block'));
 const Team = lazy(() => import('../components/Team'));
-const Testimonials = lazy(() => import('../components/Testimonials'));
+const Testimonials = lazy(() => import('../components/Testimonials/slider'));
 const Info = lazy(() => import('../components/Information'));
 const Footer = lazy(() => import('../components/Footer'));
 
@@ -67,6 +69,7 @@ const About = () => {
       </LazyLoad>
 
       <LazyLoad>
+        {/* <Carousel /> */}
         <Testimonials />
       </LazyLoad>
       {/* <Instagramm />   */}

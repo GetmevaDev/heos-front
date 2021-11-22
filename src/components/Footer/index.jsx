@@ -21,6 +21,7 @@ const REVIEWS = gql`
           icon {
             url
           }
+          urlIcon
           title
         }
 
@@ -79,11 +80,13 @@ const Footer = ({ location }) => {
           </ul>
           <span className={styles.social}>
             <h4> {data.navigation.footer[0].social[0].title}</h4>
-            <img
-              src={data.navigation.footer[0].social[0].icon[0].url}
-              alt=""
-              style={{ paddingTop: 5 }}
-            />
+            <a href={data.navigation.footer[0].social[0].urlIcon}>
+              <img
+                src={data.navigation.footer[0].social[0].icon[0].url}
+                alt=""
+                style={{ paddingTop: 5 }}
+              />
+            </a>
           </span>
           <div className={styles.contact}>
             <h4> {data.navigation.footer[0].Contact[0].title}</h4>
@@ -102,10 +105,15 @@ const Footer = ({ location }) => {
           </div>
 
           <div className={styles.logoRight}>
-            <img src={data.navigation.footer[0].logoCompany[0].url} alt="" />
+            <a href="https://robertgerov.com/">
+              <img src={data.navigation.footer[0].logoCompany[0].url} alt="" />
+            </a>
             <span>
               {data.navigation.footer[0].text}
-              <br /> by <b> {data.navigation.footer[0].textColorCompany}</b>
+              <br /> by
+              <a href="https://robertgerov.com/">
+                <b> {data.navigation.footer[0].textColorCompany}</b>{' '}
+              </a>
             </span>
           </div>
         </div>

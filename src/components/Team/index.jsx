@@ -10,7 +10,7 @@ const Team = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = () => {
-    const firstContent = 'https://heos.herokuapp.com/hampton-teams';
+    const firstContent = 'http://localhost:1337/hampton-teams';
     const secondContent = 'https://heos.herokuapp.com/manhattan-teams';
 
     const getApiFirst = axios.get(firstContent);
@@ -34,13 +34,15 @@ const Team = () => {
 
   if (loading) return <div></div>;
 
+  console.log(firstSign);
+
   return (
     <div className="container">
       <div className={styles.teamManhattan}>
         {/* <h1 className={styles.titleTeam}>{firstSign[0].title}</h1> */}
         <div className={styles.cards}>
-          {firstSign.map((item) => (
-            <div className={styles.card} key={item.id}>
+          {firstSign[0].hamptonTeam.map((item) => (
+            <div className={styles.card} key={item._id}>
               <img className={styles.img} src={item.photo[0].url} alt="" />
               <h2 className={styles.name}>{item.name}</h2>
               <p>{item.position}</p>
