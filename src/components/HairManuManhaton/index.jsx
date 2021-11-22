@@ -96,8 +96,8 @@ const MenuManhaton = () => {
 
             <div className={styles.right}>
               <h1>
-                {data.manhatonMenus[4].text}
-                <p>{data.manhatonMenus[4].textColor} </p>
+                {data.manhatonMenus[4]?.text}
+                <p>{data.manhatonMenus[4]?.textColor} </p>
               </h1>
             </div>
           </div>
@@ -130,8 +130,8 @@ const MenuManhaton = () => {
 
             <div className={styles.right}>
               <h1>
-                {data.manhatonMenus[7].text}
-                <p>{data.manhatonMenus[7].textColor} </p>
+                {data.manhatonMenus[7]?.text}
+                <p>{data.manhatonMenus[7]?.textColor} </p>
               </h1>
             </div>
           </div>

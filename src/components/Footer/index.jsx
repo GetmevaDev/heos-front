@@ -90,9 +90,14 @@ const Footer = ({ location }) => {
             <p>{data.navigation.footer[0].Contact[0].text}</p>
             <p>
               {data.navigation.footer[0].Contact[1].text}
-              <b> {data.navigation.footer[0].Contact[1].textColor}</b> <br />
+              <a href="tel:631-537-8000" className={styles.tel}>
+                <b> {data.navigation.footer[0].Contact[1].textColor}</b>
+              </a>
+              <br />
               {data.navigation.footer[0].Contact[2].text}
-              <b>{data.navigation.footer[0].Contact[2].textColor}</b>
+              <a href="tel:212-837-1014" className={styles.tel}>
+                <b>{data.navigation.footer[0].Contact[2].textColor}</b>
+              </a>
             </p>
           </div>
 

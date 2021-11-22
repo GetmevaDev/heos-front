@@ -1,8 +1,8 @@
-import React from "react";
-import { useQuery, gql } from "@apollo/client";
-import ReactMarkdown from "react-markdown";
+import React from 'react';
+import { useQuery, gql } from '@apollo/client';
+import ReactMarkdown from 'react-markdown';
 
-import styles from "./style.module.css";
+import styles from './style.module.css';
 
 const REVIEWS = gql`
   query information {
@@ -31,8 +31,7 @@ const Info = () => {
           <span className={styles.circle}></span>
           <span
             className={styles.svg}
-            style={{ backgroundImage: `url(${data.infos[0].svg[0].url})` }}
-          ></span>
+            style={{ backgroundImage: `url(${data.infos[0].svg[0].url})` }}></span>
           <h4 className={styles.infoTitle}>{data.infos[0].text}</h4>
           <ReactMarkdown>{data.infos[0].desc}</ReactMarkdown>
         </div>
@@ -41,8 +40,7 @@ const Info = () => {
           <span className={styles.circle}></span>
           <span
             className={styles.svg}
-            style={{ backgroundImage: `url(${data.infos[1].svg[0].url})` }}
-          ></span>
+            style={{ backgroundImage: `url(${data.infos[1].svg[0].url})` }}></span>
           <h4 className={styles.infoTitle}>{data.infos[1].text}</h4>
           {data.infos[1].clock.map(({ text }, index) => (
             <ReactMarkdown key={index}>{text}</ReactMarkdown>
@@ -53,12 +51,13 @@ const Info = () => {
           <span className={styles.circle}></span>
           <span
             className={styles.svg}
-            style={{ backgroundImage: `url(${data.infos[2].svg[0].url})` }}
-          ></span>
+            style={{ backgroundImage: `url(${data.infos[2].svg[0].url})` }}></span>
 
           <h4 className={styles.infoTitle}>{data.infos[2].text}</h4>
           {data.infos[2].clock.map(({ text }, index) => (
-            <ReactMarkdown key={index}>{text}</ReactMarkdown>
+            <a href="">
+              <ReactMarkdown key={index}>{text}</ReactMarkdown>
+            </a>
           ))}
         </div>
       </div>
