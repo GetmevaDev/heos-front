@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import styles from "./style.module.css";
+import React, { useState, useEffect } from 'react';
+import styles from './style.module.css';
 
-import axios from "axios";
+import axios from 'axios';
 
 const Team = () => {
   const [firstSign, setFirstSign] = useState([]);
@@ -10,8 +10,8 @@ const Team = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = () => {
-    const firstContent = "https://heos.herokuapp.com/hampton-teams";
-    const secondContent = "https://heos.herokuapp.com/manhattan-teams";
+    const firstContent = 'https://heos.herokuapp.com/hampton-teams';
+    const secondContent = 'https://heos.herokuapp.com/manhattan-teams';
 
     const getApiFirst = axios.get(firstContent);
     const getApiSecond = axios.get(secondContent);
@@ -24,7 +24,7 @@ const Team = () => {
         setFirstSign(allDataFirstContent);
         setSecondSign(allDataSecondContent);
         setLoading(false);
-      })
+      }),
     );
   };
 
@@ -41,7 +41,7 @@ const Team = () => {
         <div className={styles.cards}>
           {firstSign.map((item) => (
             <div className={styles.card} key={item.id}>
-              <img src={item.photo[0].url} alt="" />
+              <img className={styles.img} src={item.photo[0].url} alt="" />
               <h2 className={styles.name}>{item.name}</h2>
               <p>{item.position}</p>
             </div>

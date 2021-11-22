@@ -16,6 +16,13 @@
   padding-left: 30px;
 }
 
+.img {
+  border-radius: 10px;
+  height: 390px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .name {
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
