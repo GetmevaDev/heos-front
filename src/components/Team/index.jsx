@@ -10,7 +10,7 @@ const Team = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = () => {
-    const firstContent = 'http://localhost:1337/hampton-teams';
+    const firstContent = 'https://heos.herokuapp.com/hampton-teams';
     const secondContent = 'https://heos.herokuapp.com/manhattan-teams';
 
     const getApiFirst = axios.get(firstContent);
