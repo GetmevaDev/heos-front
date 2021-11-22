@@ -1,7 +1,7 @@
-import React from "react";
-import { useQuery, gql } from "@apollo/client";
+import React from 'react';
+import { useQuery, gql } from '@apollo/client';
 
-import styles from "./style.module.css";
+import styles from './style.module.css';
 
 const REVIEWS = gql`
   query meet {
@@ -23,6 +23,8 @@ const MeetFounders = () => {
 
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
+
+  console.log(data);
   return (
     <div className="container">
       <div className={styles.meet}>
@@ -32,23 +34,14 @@ const MeetFounders = () => {
             className={styles.ceneterMeetLogo}
             style={{
               backgroundImage: `url(${data.meetFounders[0].logo[0].url})`,
-            }}
-          ></span>
+            }}></span>
           <div className={styles.leftMeet}>
-            <img
-              className={styles.man}
-              src={data.meetFounders[0].photo[0].url}
-              alt=""
-            />
+            <img className={styles.man} src={data.meetFounders[0].photo[0].url} alt="" />
             <h3 className={styles.name}>{data.meetFounders[0].name}</h3>
           </div>
           <div className={styles.rightMeet}>
-            <img
-              className={styles.man}
-              src={data.meetFounders[1].photo[0].url}
-              alt=""
-            />
-            <h3 className={styles.name}>{data.meetFounders[1].name}v</h3>
+            <img className={styles.man} src={data.meetFounders[1].photo[0].url} alt="" />
+            <h3 className={styles.name}>{data.meetFounders[1].name}</h3>
           </div>
         </div>
       </div>

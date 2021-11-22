@@ -40,7 +40,7 @@ const Testimonials = () => {
       <div className="container">
         <div className={styles.testimonialsInner}>
           <h1 className={styles.title}>Testimonials</h1>
-          <div className={styles.arrows}>
+          {/* <div className={styles.arrows}>
             <svg
               className="leftArrrow"
               width="16"
@@ -71,20 +71,20 @@ const Testimonials = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
+          </div> */}
         </div>
         <div className={styles.cards}>
-          <Carousel breakPoints={breakPoints} infiniteLoop={true}>
+          <Carousel breakPoints={breakPoints}>
             {data.testimonials.map((item) => (
               <div className={styles.card}>
                 <div className={styles.cardInner}>
-                  <img className={styles.cardImg} src={item.photo[0].url} alt="" />
+                  <img className={styles.cardImg} src={item.photo[0]?.url} alt="" />
                   <div className={styles.nameInner}>
-                    <h5>{item.name}</h5>
+                    <h5>{item?.name}</h5>
                     <span style={{ color: '#FBB040' }}>★★★★★</span>
                   </div>
                 </div>
-                <div className={styles.cardText}>{item.desc}</div>
+                <div className={styles.cardText}>{item?.desc}</div>
               </div>
             ))}
           </Carousel>

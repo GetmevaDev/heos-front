@@ -49,6 +49,46 @@ a {
   text-decoration: none;
 }
 
+.rec.rec-pagination {
+  display: none;
+}
+
+.rec.rec-arrow-left {
+  position: relative;
+  top: -200px;
+  left: 1130px;
+}
+
+.rec.rec-arrow-left:enabled {
+  color: #d1a068;
+}
+
+.rec.rec-arrow-right:enabled {
+  color: #d1a068;
+}
+
+.jRFJkP {
+  box-shadow: none !important;
+}
+
+.cNNJIt {
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.rec.rec-arrow:hover {
+}
+
+.cNNJIt:disabled {
+  color: gray;
+  cursor: pointer;
+}
+
+.rec.rec-arrow-right {
+  position: relative;
+  top: -200px;
+}
+
 ul[class],
 ol[class] {
   list-style: none;

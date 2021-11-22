@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 const BlockAdress = lazy(() => import('../components/BlockAdress'));
 const AboutUs = lazy(() => import('../components/AboutUs'));
 const MeetFounders = lazy(() => import('../components/MeetFounders'));
-const Testimonials = lazy(() => import('../components/Testimonials/slider'));
+const Testimonials = lazy(() => import('../components/Testimonials/'));
 
 const Info = lazy(() => import('../components/Information'));
 const Footer = lazy(() => import('../components/Footer'));

@@ -10,7 +10,7 @@ import LazyLoad from 'react-lazyload';
 const Navbar = lazy(() => import('../components/Menu/Navbar'));
 const Block = lazy(() => import('../components/Block'));
 const Team = lazy(() => import('../components/Team'));
-const Testimonials = lazy(() => import('../components/Testimonials/slider'));
+const Testimonials = lazy(() => import('../components/Testimonials/'));
 const Info = lazy(() => import('../components/Information'));
 const Footer = lazy(() => import('../components/Footer'));
 
