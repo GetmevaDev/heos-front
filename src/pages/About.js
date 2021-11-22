@@ -18,6 +18,8 @@ const REVIEWS = gql`
       aboutSeo {
         seo
         title
+        desc
+        importantTitle
         bg {
           url
         }
@@ -47,8 +49,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
         <title>{data.aboutseo.aboutSeo.seo}</title>
+        <meta name="description" content={data.aboutseo.aboutSeo.desc} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content={data.aboutseo.aboutSeo.importantTitle} />
       </Helmet>
 
       <LazyLoad>

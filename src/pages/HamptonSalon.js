@@ -18,6 +18,8 @@ const REVIEWS = gql`
     hamptonSalon {
       ham {
         title
+        desc
+        importantTitle
         bg {
           url
         }
@@ -50,10 +52,9 @@ const HamptonSalon = () => {
       <Helmet prioritizeSeoTags>
         <meta charSet="utf-8" />
         <title>{data.hamptonSalon.ham.seo}</title>
-        {/* <link rel="notImportant" href="https://www.chipotle.com" />
-          <meta name="whatever" value="notImportant" />
-          <link rel="canonical" href="https://www.tacobell.com" />
-          <meta property="og:title" content="A very important title" /> */}
+        <meta name="description" content={data.hamptonSalon.ham.desc} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content={data.hamptonSalon.ham.importantTitle} />
       </Helmet>
       <Navbar />
       <Block title={data.hamptonSalon.ham.title} img={data.hamptonSalon.ham.bg[0].url} />

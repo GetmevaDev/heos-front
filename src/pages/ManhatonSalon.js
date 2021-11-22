@@ -16,6 +16,8 @@ const REVIEWS = gql`
     manhatonSalon {
       manh {
         title
+        desc
+        importantTitle
         bg {
           url
         }
@@ -45,8 +47,10 @@ const ManhatonSalon = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
         <title>{data.manhatonSalon.manh.seo}</title>
+        <meta name="description" content={data.manhatonSalon.manh.desc} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content={data.manhatonSalon.manh.importantTitle} />
       </Helmet>
       <Navbar />
       <Block title={data.manhatonSalon.manh.title} img={data.manhatonSalon.manh.bg[0].url} />

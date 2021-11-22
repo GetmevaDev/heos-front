@@ -18,6 +18,8 @@ const REVIEWS = gql`
     homeseo {
       seoHome {
         Home
+        desc
+        importantTitle
       }
     }
   }
@@ -45,6 +47,9 @@ const Home = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{data.homeseo.seoHome.Home}</title>
+        <meta name="description" content={data.homeseo.seoHome.desc} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content={data.homeseo.seoHome.importantTitle} />
       </Helmet>
       <Navbar />
       <BlockAdress />
