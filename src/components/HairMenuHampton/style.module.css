@@ -131,12 +131,10 @@
 
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .menuHampton {
-    padding-top: 40px;
     padding-bottom: 40px;
   }
 
   .menuHamptonTwo {
-    padding-top: 40px;
     padding-bottom: 40px;
   }
 
@@ -149,6 +147,7 @@
     writing-mode: initial;
     transform: rotate(360deg);
     line-height: 44px;
+    padding-top: 55px;
     font-size: 30px;
   }
 

@@ -5,7 +5,7 @@ import ClipLoader from 'react-spinners/HashLoader';
 import { css } from '@emotion/react';
 import LazyLoad from 'react-lazyload';
 
-const Navbar = lazy(() => import('../components/Menu/Navbar'));
+const Navbar = lazy(() => import('../components/Navigation'));
 const Block = lazy(() => import('../components/Block'));
 const MapManh = lazy(() => import('../components/AddressMap/manh'));
 const Footer = lazy(() => import('../components/Footer'));

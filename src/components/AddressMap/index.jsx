@@ -23,7 +23,7 @@ const REVIEWS = gql`
 const Map = () => {
   const { loading, error, data } = useQuery(REVIEWS);
 
-  if (loading) return <p>loadng</p>;
+  if (loading) return <p></p>;
   if (error) return <p>error</p>;
 
   return (

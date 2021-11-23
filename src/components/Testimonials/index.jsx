@@ -43,8 +43,8 @@ const Testimonials = () => {
         </div>
         <div className={styles.cards}>
           <Carousel breakPoints={breakPoints}>
-            {data.testimonials.map((item) => (
-              <div className={styles.card}>
+            {data.testimonials.map((item, index) => (
+              <div className={styles.card} key={index}>
                 <div className={styles.cardInner}>
                   <img className={styles.cardImg} src={item.photo[0]?.url} alt="" />
                   <div className={styles.nameInner}>

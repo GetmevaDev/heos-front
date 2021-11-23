@@ -7,7 +7,8 @@ import { Helmet } from 'react-helmet-async';
 import ClipLoader from 'react-spinners/HashLoader';
 import { css } from '@emotion/react';
 
-const Navbar = lazy(() => import('../components/Menu/Navbar'));
+const Navbar = lazy(() => import('../components/Navigation'));
+
 const Block = lazy(() => import('../components/Block'));
 const Map = lazy(() => import('../components/AddressMap'));
 const Footer = lazy(() => import('../components/Footer'));

@@ -119,6 +119,7 @@
   .blockimg {
     top: 23%;
   }
+
   .location {
     top: 45%;
     left: 35%;
@@ -147,9 +148,10 @@
   .blockimg {
     top: 25%;
   }
+
   .location {
     top: 46%;
-    left: 35%;
+    left: 30%;
   }
 
   .blockAddress p {
@@ -180,6 +182,10 @@
   .location {
     top: 45%;
     left: 35%;
+  }
+
+  .blockAddress {
+    margin-top: -77px;
   }
 
   .blockAddress p {

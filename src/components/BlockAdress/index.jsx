@@ -39,7 +39,7 @@ const BlockAdress = () => {
             backgroundImage: `url(${data.blockAddresses[0].location[0].url})`,
           }}></span>
         <p>{data.blockAddresses[0].desc}</p>
-        <Link to="/contact/manhaton">
+        <Link to="/contact/manhattan">
           <button className={styles.btnLeft}>MAKE AN APPOINTMENT</button>
         </Link>
       </div>

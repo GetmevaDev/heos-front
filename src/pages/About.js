@@ -7,7 +7,8 @@ import LazyLoad from 'react-lazyload';
 
 // import Carousel from '../components/Testimonials/Carousel';
 
-const Navbar = lazy(() => import('../components/Menu/Navbar'));
+const Navbar = lazy(() => import('../components/Navigation'));
+
 const Block = lazy(() => import('../components/Block'));
 const Team = lazy(() => import('../components/Team'));
 const Testimonials = lazy(() => import('../components/Testimonials/'));

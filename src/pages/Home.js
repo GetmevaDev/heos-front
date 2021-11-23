@@ -4,6 +4,7 @@ import { useQuery, gql } from '@apollo/client';
 import ClipLoader from 'react-spinners/HashLoader';
 import { css } from '@emotion/react';
 import { Helmet } from 'react-helmet';
+import Nav from '../components/Navigation';
 
 const BlockAdress = lazy(() => import('../components/BlockAdress'));
 const AboutUs = lazy(() => import('../components/AboutUs'));
@@ -12,7 +13,7 @@ const Testimonials = lazy(() => import('../components/Testimonials/'));
 
 const Info = lazy(() => import('../components/Information'));
 const Footer = lazy(() => import('../components/Footer'));
-const Navbar = lazy(() => import('../components/Menu/Navbar'));
+// const Navbar = lazy(() => import('../components/Menu/Navbar'));
 
 const REVIEWS = gql`
   query seo {
@@ -52,7 +53,8 @@ const Home = () => {
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={data.homeseo.seoHome.importantTitle} />
       </Helmet>
-      <Navbar />
+      <Nav />
+      {/* <Navbar /> */}
       <BlockAdress />
       <AboutUs />
       <MeetFounders />
