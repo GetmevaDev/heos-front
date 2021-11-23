@@ -185,7 +185,7 @@ color: #ff1800!important;
     padding: 6px 7px;
     border-radius: 5px;
     cursor: pointer;
-    right: 0;
+    left: 0;
     position: absolute;
     z-index: 10037;
   }
@@ -228,8 +228,9 @@ color: #ff1800!important;
   .sub__menus__Active {
     display: block !important;
     margin: 0 auto;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: relative;
   }
 
   .sub__menus__Active li {

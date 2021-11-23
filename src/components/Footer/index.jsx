@@ -58,36 +58,32 @@ const Footer = ({ location }) => {
               {data.navigation.footer[0].reserved}
             </p>
           </div>
-          <ul className={styles.menu}>
-            <h4>{data.navigation.footer[0].items[0].title}</h4>
+          <div className={styles.menuInner}>
+            <ul className={styles.menu}>
+              <h4>{data.navigation.footer[0].items[0].title}</h4>
 
-            {data.navigation.footer[0].items.map(({ item, href }, index) => (
-              <li key={index} className={styles.list}>
-                <NavLink
-                  className={styles.link}
-                  to={href}
-                  activeClassName={location.pathname === href ? styles.active : styles.link}>
-                  {item}
-                </NavLink>
-              </li>
-            ))}
-            <div className={styles.salons}>
-              <ul>
-                <li>M.Salon</li>
-                <li>H.Salon</li>
-              </ul>
-            </div>
-          </ul>
-          <span className={styles.social}>
-            <h4> {data.navigation.footer[0].social[0].title}</h4>
-            <a href={data.navigation.footer[0].social[0].urlIcon}>
-              <img
-                src={data.navigation.footer[0].social[0].icon[0].url}
-                alt=""
-                style={{ paddingTop: 5 }}
-              />
-            </a>
-          </span>
+              {data.navigation.footer[0].items.map(({ item, href }, index) => (
+                <li key={index} className={styles.list}>
+                  <NavLink
+                    className={styles.link}
+                    to={href}
+                    activeClassName={location.pathname === href ? styles.active : styles.link}>
+                    {item}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+            <span className={styles.social}>
+              <h4> {data.navigation.footer[0].social[0].title}</h4>
+              <a href={data.navigation.footer[0].social[0].urlIcon}>
+                <img
+                  src={data.navigation.footer[0].social[0].icon[0].url}
+                  alt=""
+                  style={{ paddingTop: 5 }}
+                />
+              </a>
+            </span>
+          </div>
           <div className={styles.contact}>
             <h4> {data.navigation.footer[0].Contact[0].title}</h4>
             <p>{data.navigation.footer[0].Contact[0].text}</p>

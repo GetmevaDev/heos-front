@@ -198,12 +198,21 @@
 
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .blockimg {
-    top: 34%;
+    top: 115px;
+    width: 87px;
+    height: 37px;
+  }
+
+  .blockAddress {
+    flex-direction: column;
+    height: 100%;
   }
   .location {
-    top: 60%;
+    top: 50%;
+    text-align: center;
+    margin: 0 auto;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(50%, -50%);
   }
 
   .blockAddress {
@@ -216,22 +225,24 @@
 
   .leftBlock p {
     width: 100%;
-    padding-right: 20px;
-    top: 75%;
-    left: 55%;
+    /* padding-right: 20px; */
+    top: 60%;
+    left: 50%;
+    transform: none;
   }
 
   .rightBlock p {
-    top: 75%;
     width: 100%;
-
-    left: 55%;
+    top: 60%;
+    left: 50%;
+    transform: none;
   }
 
   .btnLeft {
-    width: 80%;
-    padding: 5px 30px;
-    display: block;
-    top: 90%;
+    width: 150%;
+    padding: 18px 30px;
+    top: 70%;
+    left: 100%;
+    transform: translate(-50%, 50%);
   }
 }
