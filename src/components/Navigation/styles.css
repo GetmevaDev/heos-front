@@ -11,6 +11,28 @@
   align-items: center;
 }
 
+.bar_border {
+  width: 20px;
+  display: block;
+  height: 3px;
+  background: rgb(255, 255, 255);
+}
+
+.bar_border-top {
+  position: relative;
+  top: 5px;
+}
+
+.bar_border-mid {
+  position: relative;
+  top: 10px;
+}
+
+.bar_border-bot {
+  position: relative;
+  top: 15px;
+}
+
 .logo-nav {
   display: none;
 }

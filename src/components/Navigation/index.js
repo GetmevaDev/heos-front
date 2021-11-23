@@ -77,7 +77,10 @@ const Navbarmenu = () => {
           ) : (
             <>
               <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass}>
-                <GiHamburgerMenu />
+                {/* <GiHamburgerMenu /> */}
+                <span className="bar_border bar_border-top"></span>
+                <span className="bar_border bar_border-mid"></span>
+                <span className="bar_border bar_border-bot"></span>
               </span>
             </>
           )}
