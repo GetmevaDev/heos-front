@@ -34,8 +34,6 @@ const Team = () => {
 
   if (loading) return <div></div>;
 
-  console.log(firstSign);
-
   return (
     <div className="container">
       <div className={styles.teamManhattan}>

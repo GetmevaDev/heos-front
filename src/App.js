@@ -3,7 +3,7 @@ import WebFont from 'webfontloader';
 import { Switch, Route } from 'react-router-dom';
 import ClipLoader from 'react-spinners/HashLoader';
 import { css } from '@emotion/react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));

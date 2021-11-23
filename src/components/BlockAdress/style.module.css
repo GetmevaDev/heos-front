@@ -67,8 +67,29 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
+  transition: all 0.4s ease;
+}
+
+.leftimgBlock {
   filter: grayscale(100%);
   transition: all 0.4s ease;
+  min-height: 100%;
+  max-width: fit-content;
+}
+
+.leftimgBlock:hover {
+  filter: grayscale(0);
+}
+
+.rightimgBlock {
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+  min-height: 100%;
+  max-width: fit-content;
+}
+
+.rightimgBlock:hover {
+  filter: grayscale(0);
 }
 
 .leftBlock p {
@@ -91,7 +112,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
-  filter: grayscale(100%);
   transition: all 0.4s ease;
 }
 
@@ -150,8 +170,9 @@
   }
 
   .location {
-    top: 46%;
-    left: 30%;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .blockAddress p {
@@ -159,7 +180,7 @@
   }
 
   .leftBlock p {
-    top: 75%;
+    top: 72%;
     left: 50%;
   }
 
@@ -177,11 +198,12 @@
 
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .blockimg {
-    top: 23%;
+    top: 34%;
   }
   .location {
-    top: 45%;
-    left: 35%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .blockAddress {
@@ -207,7 +229,8 @@
   }
 
   .btnLeft {
-    width: 90%;
+    width: 80%;
+    padding: 5px 30px;
     display: block;
     top: 90%;
   }

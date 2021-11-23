@@ -181,7 +181,7 @@ color: #ff1800!important;
   }
   .main-nav .menubar__button {
     display: block !important;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 6px 7px;
     border-radius: 5px;
     cursor: pointer;
@@ -203,6 +203,7 @@ color: #ff1800!important;
     margin-top: -50px;
     left: 0;
     height: 50%;
+    min-height: 100%;
     z-index: 10007;
     background: #242222;
     text-align: center;

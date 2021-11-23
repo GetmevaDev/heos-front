@@ -9,6 +9,7 @@ const REVIEWS = gql`
     infos {
       text
       desc
+      desbBottom
       svg {
         url
       }
@@ -25,7 +26,6 @@ const Info = () => {
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
 
-  console.log(data);
   return (
     <div className="container">
       <div className={styles.info}>
@@ -36,6 +36,7 @@ const Info = () => {
             style={{ backgroundImage: `url(${data.infos[0].svg[0].url})` }}></span>
           <h4 className={styles.infoTitle}>{data.infos[0].text}</h4>
           <ReactMarkdown>{data.infos[0].desc}</ReactMarkdown>
+          <ReactMarkdown>{data.infos[0].desbBottom}</ReactMarkdown>
         </div>
 
         <div className={styles.hours}>

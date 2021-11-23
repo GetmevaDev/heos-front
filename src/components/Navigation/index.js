@@ -58,7 +58,6 @@ const Navbarmenu = () => {
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
 
-  console.log(data);
   return (
     <div className="container">
       <header className="header__middle">

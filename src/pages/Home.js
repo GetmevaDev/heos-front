@@ -43,7 +43,6 @@ const Home = () => {
       </p>
     );
   if (error) return <p>error {JSON.stringify(error)}</p>;
-  console.log('home');
   return (
     <>
       <Helmet>

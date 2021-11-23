@@ -28,7 +28,6 @@ const MenuManhaton = () => {
 
   if (loading) return <p></p>;
   if (error) return <p>error</p>;
-  console.log(data);
 
   return (
     <>

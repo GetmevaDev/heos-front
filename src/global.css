@@ -76,6 +76,9 @@ a {
   background: none !important;
 }
 
+.rec.rec-slider-container {
+  margin: 0;
+}
 .rec.rec-arrow:hover {
 }
 

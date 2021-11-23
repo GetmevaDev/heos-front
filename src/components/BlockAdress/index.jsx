@@ -30,9 +30,8 @@ const BlockAdress = () => {
   return (
     <div className={styles.blockAddress}>
       <img className={styles.blockimg} src={data.blockAddresses[0].centerlogo[0].url} alt="" />
-      <div
-        className={styles.leftBlock}
-        style={{ backgroundImage: `url(${data.blockAddresses[0].bg[0].url})` }}>
+      <div className={styles.leftBlock}>
+        <img className={styles.leftimgBlock} src={data.blockAddresses[0].bg[0].url} alt="" />
         <span
           className={styles.location}
           style={{
@@ -43,9 +42,8 @@ const BlockAdress = () => {
           <button className={styles.btnLeft}>MAKE AN APPOINTMENT</button>
         </Link>
       </div>
-      <div
-        className={styles.rightBlock}
-        style={{ backgroundImage: `url(${data.blockAddresses[1].bg[0].url})` }}>
+      <div className={styles.rightBlock}>
+        <img className={styles.rightimgBlock} src={data.blockAddresses[1].bg[0].url} alt="" />
         <span
           className={styles.location}
           style={{
