@@ -9,8 +9,8 @@
 .about:after {
   content: '';
   z-index: 5;
+  background: #666666;
   position: absolute;
-  background-image: url('../../images/line.png');
   width: 210px;
   height: 2px;
   left: 0;

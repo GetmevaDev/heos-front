@@ -3,7 +3,6 @@ import WebFont from 'webfontloader';
 import { Switch, Route } from 'react-router-dom';
 import ClipLoader from 'react-spinners/HashLoader';
 import { css } from '@emotion/react';
-import { HelmetProvider } from 'react-helmet-async';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -35,12 +34,10 @@ const App = () => {
             <ClipLoader css={override} size={120} />
           </h1>
         }>
-        <HelmetProvider>
-          <Route path="/" component={Home} exact />
-          <Route path="/about" component={About} />
-          <Route path="/contact/manhattan" component={ManhatonSalon} />
-          <Route path="/contact/hampton" component={HamptonSalon} />
-        </HelmetProvider>
+        <Route path="/" component={Home} exact />
+        <Route path="/about" component={About} />
+        <Route path="/contact/manhattan" component={ManhatonSalon} />
+        <Route path="/contact/hampton" component={HamptonSalon} />
       </Suspense>
       <Route path="" component={NotFound} />
     </Switch>
