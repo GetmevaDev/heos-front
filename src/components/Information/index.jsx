@@ -51,8 +51,6 @@ const Info = () => {
           <p>{data.infos[3].desbBottom}</p>
         </div>
 
-        {console.log(data)}
-
         <div className={styles.hours}>
           <span className={styles.circle}></span>
           <span
