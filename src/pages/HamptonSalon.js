@@ -1,5 +1,4 @@
 import React, { lazy, memo } from 'react';
-import LazyLoad from 'react-lazyload';
 
 import { useQuery, gql } from '@apollo/client';
 import { Helmet } from 'react-helmet-async';

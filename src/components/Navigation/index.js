@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { FiAlignRight, FiXCircle, FiChevronDown } from 'react-icons/fi';
+import { FiChevronDown } from 'react-icons/fi';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineClose } from 'react-icons/ai';
+
 import { useQuery, gql } from '@apollo/client';
 
 import './styles.css';
@@ -16,6 +18,7 @@ const REVIEWS = gql`
       }
       header {
         item
+        href
         subItem {
           subitem
           href
@@ -71,49 +74,31 @@ const Navbarmenu = () => {
           {isResponsiveclose === true ? (
             <>
               <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass}>
-                <FiXCircle />
+                <AiOutlineClose />
               </span>
             </>
           ) : (
             <>
               <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass}>
                 {/* <GiHamburgerMenu /> */}
-                <span className="bar_border bar_border-top"></span>
-                <span className="bar_border bar_border-mid"></span>
-                <span className="bar_border bar_border-bot"></span>
+                <div className="menubar__inner">
+                  <span className="bar_border bar_border-top"></span>
+                  <span className="bar_border bar_border-mid"></span>
+                  <span className="bar_border bar_border-bot"></span>
+                </div>
               </span>
             </>
           )}
 
           <ul className={boxClass.join(' ')}>
-            <li className="menu-item marginTop">
-              <NavLink exact activeClassName="is-active " onClick={toggleClass} to={`/`}>
-                {data.navigation?.header[0].item}
-              </NavLink>
-            </li>
-            <li className="menu-item ">
-              <NavLink onClick={toggleClass} activeClassName="is-active" to={`/about`}>
-                {data.navigation?.header[1].item}
-              </NavLink>
-            </li>
-            <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows">
-              <Link to="/#">
-                {data.navigation?.header[2].item}
-                <FiChevronDown />
-              </Link>
-              <img className="logo-nav" src={logo} alt="" />
-              <ul className={boxClassSubMenu.join(' ')}>
-                {data.navigation.header[2].subItem.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <NavLink onClick={toggleClass} activeClassName="is-active" to={item.href}>
-                        {item.subitem}
-                      </NavLink>
-                    </li>
-                  );
-                })}
-              </ul>
-            </li>
+            <img className="logo-nav" src={logo} alt="" />
+            {data.navigation?.header.map(({ item, href }) => (
+              <li className="menu-item marginTop">
+                <NavLink exact activeClassName="is-active " onClick={toggleClass} to={href}>
+                  {item}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
@@ -122,3 +107,6 @@ const Navbarmenu = () => {
 };
 
 export default Navbarmenu;
+
+{
+}

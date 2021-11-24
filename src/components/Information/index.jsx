@@ -35,9 +35,23 @@ const Info = () => {
             className={styles.svg}
             style={{ backgroundImage: `url(${data.infos[0].svg[0].url})` }}></span>
           <h4 className={styles.infoTitle}>{data.infos[0].text}</h4>
-          <ReactMarkdown>{data.infos[0].desc}</ReactMarkdown>
-          <ReactMarkdown>{data.infos[0].desbBottom}</ReactMarkdown>
+
+          <p>{data.infos[0].desc}</p>
+          <p>{data.infos[0].desbBottom}</p>
         </div>
+
+        <div className={styles.address}>
+          <span className={styles.circle}></span>
+          <span
+            className={styles.svg}
+            style={{ backgroundImage: `url(${data.infos[0].svg[0].url})` }}></span>
+          <h4 className={styles.infoTitle}>{data.infos[3].text}</h4>
+
+          <p>{data.infos[3].desc}</p>
+          <p>{data.infos[3].desbBottom}</p>
+        </div>
+
+        {console.log(data)}
 
         <div className={styles.hours}>
           <span className={styles.circle}></span>

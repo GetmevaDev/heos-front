@@ -3,7 +3,6 @@ import { useQuery, gql } from '@apollo/client';
 import { Helmet } from 'react-helmet';
 import ClipLoader from 'react-spinners/HashLoader';
 import { css } from '@emotion/react';
-import LazyLoad from 'react-lazyload';
 
 const Navbar = lazy(() => import('../components/Navigation'));
 const Block = lazy(() => import('../components/Block'));
