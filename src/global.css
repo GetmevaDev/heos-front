@@ -41,6 +41,8 @@ dd {
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
+
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
