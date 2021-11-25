@@ -181,6 +181,25 @@ color: #ff1800!important;
   margin: 17px 0 0 0;
 }
 
+@media screen and (orientation: landscape) {
+  .main-nav .menubar__button {
+    display: block !important;
+    color: rgb(255, 255, 255);
+    padding: 6px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    z-index: 10037;
+  }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .menubar__button {
+    display: block;
+  }
+}
+
 @media (max-width: 991px) {
   .main-menu.menu-right.menuq1.menuq2 .menu-item {
     padding: 20px;
@@ -199,7 +218,6 @@ color: #ff1800!important;
   }
 
   .marginTop {
-    margin-top: 100px;
   }
 
   .sub__menus__arrows svg,
