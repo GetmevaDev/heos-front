@@ -22,7 +22,7 @@
 .bar_border {
   width: 20px;
   display: block;
-
+  z-index: 9999;
   height: 2px;
   background: rgb(0, 0, 0);
 }
