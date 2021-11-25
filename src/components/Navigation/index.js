@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+
 import { AiOutlineClose } from 'react-icons/ai';
 import { useQuery, gql } from '@apollo/client';
 
@@ -70,13 +71,13 @@ const Navbarmenu = () => {
           {/* Responsive Menu Button */}
           {isResponsiveclose === true ? (
             <>
-              <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass}>
+              <span className="menubar__button" onClick={toggleClass}>
                 <AiOutlineClose />
               </span>
             </>
           ) : (
             <>
-              <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass}>
+              <span className="menubar__button" onClick={toggleClass}>
                 <svg
                   width="30"
                   height="30"
