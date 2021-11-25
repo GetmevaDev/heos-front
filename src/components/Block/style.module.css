@@ -14,7 +14,7 @@
 }
 
 .block h1 {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   font-size: 64px;
   line-height: 83px;
@@ -37,18 +37,35 @@
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .block {
     margin-bottom: 0;
+    background-position: center;
+    position: relative;
+    background-image: url('../../images/bg.png') !important;
+  }
+
+  .blockLogoImg {
+    background-image: url('../../images/logobg.png');
+  }
+
+  .blockInner img {
+    width: 87px;
+    opacity: 1;
+    height: 37px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
   }
 
   .block h1 {
-    font-family: "DM Sans", sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 34px;
+    line-height: 80px;
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 50%;
     white-space: nowrap;
-    line-height: 83px;
     color: white;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
 }
