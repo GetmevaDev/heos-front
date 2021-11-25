@@ -79,7 +79,6 @@ const Navbarmenu = () => {
           ) : (
             <>
               <span className="menubar__button" onClick={toggleClass}>
-                <span>Lorem ipsum dolor sit.</span>
                 <img src={burger} alt="" />
               </span>
             </>
