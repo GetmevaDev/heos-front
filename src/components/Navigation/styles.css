@@ -243,6 +243,7 @@ color: #ff1800!important;
     border-radius: 5px;
     cursor: pointer;
     left: 0;
+    top: 10px;
     position: absolute;
     z-index: 10037;
   }

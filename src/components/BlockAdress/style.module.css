@@ -197,7 +197,7 @@
 
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .blockimg {
-    top: 115px;
+    top: 30px;
     width: 87px;
     height: 37px;
   }
@@ -225,7 +225,6 @@
   }
 
   .blockAddress {
-    margin-top: -77px;
   }
 
   .blockAddress p {
