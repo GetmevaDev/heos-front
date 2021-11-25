@@ -3,11 +3,6 @@ import { useQuery, gql } from '@apollo/client';
 import Carousel from 'react-elastic-carousel';
 
 import styles from './style.module.css';
-import SwiperCore, { Navigation } from 'swiper';
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
-
-SwiperCore.use([Navigation]);
 
 const REVIEWS = gql`
   query gettest {

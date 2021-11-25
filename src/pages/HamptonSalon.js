@@ -1,7 +1,7 @@
 import React, { lazy, memo } from 'react';
 
 import { useQuery, gql } from '@apollo/client';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 import ClipLoader from 'react-spinners/HashLoader';
 import { css } from '@emotion/react';
@@ -49,7 +49,7 @@ const HamptonSalon = () => {
 
   return (
     <>
-      <Helmet prioritizeSeoTags>
+      <Helmet>
         <meta charSet="utf-8" />
         <title>{data.hamptonSalon.ham.seo}</title>
         <meta name="description" content={data.hamptonSalon.ham.desc} />
