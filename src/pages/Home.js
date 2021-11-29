@@ -51,6 +51,9 @@ const Home = () => {
         <meta name="description" content={data.homeseo.seoHome.desc} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={data.homeseo.seoHome.importantTitle} />
+        <meta property="og:url" content="" />
+
+        <meta property="og:image" content="" />
       </Helmet>
       <Nav />
       {/* <Navbar /> */}

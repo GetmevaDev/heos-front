@@ -3,6 +3,7 @@ import WebFont from 'webfontloader';
 import { Switch, Route } from 'react-router-dom';
 import ClipLoader from 'react-spinners/HashLoader';
 import { css } from '@emotion/react';
+import useGaTracker from './components/gaTracker';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -11,6 +12,8 @@ const HamptonSalon = lazy(() => import('./pages/HamptonSalon'));
 const NotFound = lazy(() => import('./pages/404'));
 
 const App = () => {
+  useGaTracker();
+
   useEffect(() => {
     WebFont.load({
       google: {

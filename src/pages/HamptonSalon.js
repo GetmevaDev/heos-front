@@ -53,8 +53,12 @@ const HamptonSalon = () => {
         <meta charSet="utf-8" />
         <title>{data.hamptonSalon.ham.seo}</title>
         <meta name="description" content={data.hamptonSalon.ham.desc} />
+
+        <meta property="og:title" content="" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={data.hamptonSalon.ham.importantTitle} />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
       </Helmet>
       <Navbar />
       <Block title={data.hamptonSalon.ham.title} img={data.hamptonSalon.ham.bg[0].url} />
