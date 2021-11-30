@@ -53,7 +53,10 @@ const About = () => {
     <>
       <Helmet>
         <title>{data.aboutseo.aboutSeo.seo}</title>
+
         <meta name="description" content={data.aboutseo.aboutSeo.desc} />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={data.aboutseo.aboutSeo.importantTitle} />
       </Helmet>

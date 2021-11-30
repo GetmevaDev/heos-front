@@ -50,6 +50,8 @@ const ManhatonSalon = () => {
         <meta name="description" content={data.manhatonSalon.manh.desc} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={data.manhatonSalon.manh.importantTitle} />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
       </Helmet>
       <Navbar />
       <Block title={data.manhatonSalon.manh.title} img={data.manhatonSalon.manh.bg[0].url} />
