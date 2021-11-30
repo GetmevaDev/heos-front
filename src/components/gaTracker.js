@@ -1,23 +1,17 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
-const useGaTracker = () => {
-  const location = useLocation();
-  const [initialized, setInitialized] = useState(false);
+function usePageViews() {
+  let location = useLocation();
 
   useEffect(() => {
-    if (!window.location.href.includes('localhost')) {
+    if (!window.GA_INITALIZED) {
       ReactGA.initialize('G-V77872CTC6');
+      window.GA_INITALIZED = true;
     }
-    setInitialized(true);
-  }, []);
-
-  useEffect(() => {
-    if (initialized) {
-      ReactGA.pageview(location.pathname + location.search);
-    }
-  }, [initialized, location]);
-};
-
-export default useGaTracker;
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  }, [location]);
+}
+export default usePageViews;
