@@ -113,14 +113,12 @@
   width: 50%;
   transition: all 0.4s ease;
 }
-
 .leftBlock:hover {
   filter: grayscale(0%);
 }
 .rightBlock:hover {
   filter: grayscale(0%);
 }
-
 .rightBlock p {
   position: absolute;
   top: 65%;
@@ -128,7 +126,6 @@
   width: 26.5vw;
   transform: translate(-50%, -50%);
 }
-
 .rightBlock p:after {
   left: 38%;
   top: -100px;
@@ -138,25 +135,21 @@
   .blockimg {
     top: 23%;
   }
-
   .location {
     top: 45%;
     left: 35%;
   }
-
   .leftBlock p {
     width: 100%;
     padding-right: 20px;
     top: 75%;
     left: 55%;
   }
-
   .rightBlock p {
     width: 100%;
     top: 75%;
     left: 50%;
   }
-
   .btnLeft {
     display: block;
     top: 90%;
@@ -167,27 +160,22 @@
   .blockimg {
     top: 25%;
   }
-
   .location {
     top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
   .blockAddress p {
     font-size: 18px;
   }
-
   .leftBlock p {
     top: 72%;
     left: 50%;
   }
-
   .rightBlock p {
     top: 75%;
     left: 50%;
   }
-
   .btnLeft {
     width: 80%;
     display: block;
@@ -201,7 +189,6 @@
     width: 87px;
     height: 37px;
   }
-
   .blockAddress {
     flex-direction: column;
     height: 100%;
@@ -213,24 +200,19 @@
     left: 100%;
     transform: translate(-50%, -50%);
   }
-
   .leftimgBlock {
     max-width: fit-content;
     width: fit-content;
   }
-
   .rightimgBlock {
     max-width: fit-content;
     width: fit-content;
   }
-
   .blockAddress {
   }
-
   .blockAddress p {
     font-size: 15px;
   }
-
   .leftBlock p {
     width: 100%;
     /* padding-right: 20px; */
@@ -238,14 +220,12 @@
     left: 50%;
     transform: none;
   }
-
   .rightBlock p {
     width: 100%;
     top: 50%;
     left: 50%;
     transform: none;
   }
-
   .btnLeft {
     width: 150%;
     padding: 18px 30px;

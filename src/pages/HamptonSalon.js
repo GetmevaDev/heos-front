@@ -19,6 +19,8 @@ const REVIEWS = gql`
       ham {
         title
         desc
+        url
+        image
         importantTitle
         bg {
           url
@@ -57,8 +59,8 @@ const HamptonSalon = () => {
         <meta property="og:title" content="" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={data.hamptonSalon.ham.importantTitle} />
-        <meta property="og:url" content="" />
-        <meta property="og:image" content="" />
+        <meta property="og:url" content={data.hamptonSalon.ham.url} />
+        <meta property="og:image" content={data.hamptonSalon.ham.image} />
       </Helmet>
       <Navbar />
       <Block title={data.hamptonSalon.ham.title} img={data.hamptonSalon.ham.bg[0].url} />

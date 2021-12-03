@@ -1,48 +1,48 @@
 .instagramm {
-    background: #333333;
+  background: #333333;
 }
 
 .instInner {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-    font-family: "DM Sans", sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-    padding-top: 83px;
-    line-height: 80px;
-    text-align: center;
-    color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  padding-top: 83px;
+  line-height: 80px;
+  text-align: center;
+  color: #ffffff;
 }
 
 .blockImage {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .nameInner {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .nameInner p {
-    font-family: "DM Sans", sans-serif;
-    font-size: 15px;
-    line-height: 27px;
-    color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 27px;
+  color: #ffffff;
 }
 
 .name {
-    font-family: "DM Sans", sans-serif;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 27px;
-    color: #D1A068;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 27px;
+  color: #d1a068;
 }
 
 .button {
-    width: 200px;
-    margin: 0 auto;
-    text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
 }

@@ -22,6 +22,8 @@ const REVIEWS = gql`
         Home
         desc
         importantTitle
+        url
+        image
       }
     }
   }
@@ -51,10 +53,8 @@ const Home = () => {
         <meta name="description" content={data.homeseo.seoHome.desc} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={data.homeseo.seoHome.importantTitle} />
-        <meta property="og:image" content="" />
-        <meta property="og:url" content="" />
-
-        <meta property="og:image" content="" />
+        <meta property="og:url" content={data.homeseo.seoHome.url} />
+        <meta property="og:image" content={data.homeseo.seoHome.image} />
       </Helmet>
       <Nav />
       {/* <Navbar /> */}

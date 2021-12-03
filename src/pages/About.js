@@ -23,6 +23,8 @@ const REVIEWS = gql`
         title
         desc
         importantTitle
+        url
+        image
         bg {
           url
         }
@@ -55,8 +57,8 @@ const About = () => {
         <title>{data.aboutseo.aboutSeo.seo}</title>
 
         <meta name="description" content={data.aboutseo.aboutSeo.desc} />
-        <meta property="og:image" content="" />
-        <meta property="og:url" content="" />
+        <meta property="og:image" content={data.aboutseo.aboutSeo.image} />
+        <meta property="og:url" content={data.aboutseo.aboutSeo.url} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={data.aboutseo.aboutSeo.importantTitle} />
       </Helmet>

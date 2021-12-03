@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./style.module.css";
-import InstagramEmbed from "react-instagram-embed";
+import React from 'react';
+import styles from './style.module.css';
+import InstagramEmbed from 'react-instagram-embed';
 
-import Woman from "../../images/woman.png";
+import Woman from '../../images/woman.png';
 
 const Instagramm = () => {
   return (
@@ -30,10 +30,7 @@ const Instagramm = () => {
             <img src={Woman} alt="" />
             <div className={styles.nameInner}>
               <h2 className={styles.name}>Eddie Arthur Salon</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cumque, eius!
-              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, eius!</p>
             </div>
           </div>
 
