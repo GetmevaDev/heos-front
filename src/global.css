@@ -31,10 +31,24 @@ dd {
 @font-face {
   font-family: 'Dm Sans', sans-serif;
   font-style: normal;
+  font-weight: 700;
+  src: local('Dm Sans'), url('./fonts/DmSans/DMSans-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dm Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Dm Sans'), url('./fonts/DmSans/DMSans-Medium.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dm Sans', sans-serif;
+  font-style: normal;
   font-weight: 400;
-  src: local('Dm Sans'), local('Dm Sans'),
-    url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap)
-      format('woff2');
+  src: local('Dm Sans'), url('./fonts/DmSans/DMSans-Regular.ttf') format('truetype');
   font-display: swap;
 }
 

@@ -5,6 +5,10 @@ import { loadableReady } from '@loadable/component';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './global.css';
+import './fonts/DmSans/DMSans-Bold.ttf';
+import './fonts/DmSans/DMSans-Medium.ttf';
+import './fonts/DmSans/DMSans-Regular.ttf';
+
 import App from './App';
 
 const client = new ApolloClient({
