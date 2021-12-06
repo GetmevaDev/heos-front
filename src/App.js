@@ -33,9 +33,9 @@ const App = () => {
     <Switch>
       <Suspense
         fallback={
-          <h1>
+          <>
             <ClipLoader css={override} size={120} />
-          </h1>
+          </>
         }>
         <Route path="/" component={Home} exact />
         <Route path="/about" component={About} />

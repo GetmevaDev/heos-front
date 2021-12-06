@@ -52,7 +52,6 @@ const HamptonSalon = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
         <title>{data.hamptonSalon.ham.seo}</title>
         <meta name="description" content={data.hamptonSalon.ham.desc} />
 

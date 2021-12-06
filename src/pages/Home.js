@@ -13,7 +13,6 @@ const Testimonials = lazy(() => import('../components/Testimonials/'));
 
 const Info = lazy(() => import('../components/Information'));
 const Footer = lazy(() => import('../components/Footer'));
-// const Navbar = lazy(() => import('../components/Menu/Navbar'));
 
 const REVIEWS = gql`
   query seo {
@@ -48,7 +47,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
+        <link rel="preload" as="image" href={data.homeseo.seoHome.url} />
         <title>{data.homeseo.seoHome.Home}</title>
         <meta name="description" content={data.homeseo.seoHome.desc} />
         <meta property="og:locale" content="en_US" />
@@ -57,11 +56,9 @@ const Home = () => {
         <meta property="og:image" content={data.homeseo.seoHome.image} />
       </Helmet>
       <Nav />
-      {/* <Navbar /> */}
       <BlockAdress />
       <AboutUs />
       <MeetFounders />
-      {/* <Instagramm /> */}
       <Testimonials />
       <Info />
       <Footer />
