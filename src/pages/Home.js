@@ -48,7 +48,6 @@ const Home = () => {
     <>
       <Helmet>
         <title>{data.homeseo.seoHome.Home}</title>
-        <link rel="preload" as="image" href={data.homeseo.seoHome.url} />
         <meta name="description" content={data.homeseo.seoHome.desc} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={data.homeseo.seoHome.importantTitle} />
