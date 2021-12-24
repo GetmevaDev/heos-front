@@ -71,7 +71,6 @@
   min-width: 480px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 68px;
 }
 
 .pricesLeft {
@@ -160,7 +159,7 @@
   }
 
   .left p {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .pricesLeft {

@@ -37,7 +37,7 @@ const MenuHampton = () => {
               {data.hamptonMenus.slice(0, 5).map((item, index) => (
                 <div className={styles.left} key={index}>
                   <h2>{item.HamptonMenu.title}</h2>
-                  <h3>{item.HamptonMenu.price}</h3>
+                  {/* <h3>{item.HamptonMenu.price}</h3> */}
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
                       {item.HamptonMenu.descparagraph.map((d, index) => (
@@ -73,7 +73,7 @@ const MenuHampton = () => {
               {data.hamptonMenus.slice(5, 6).map((item, index) => (
                 <div className={styles.left} key={index}>
                   <h2>{item.HamptonMenu.title}</h2>
-                  <h3>{item.HamptonMenu.price}</h3>
+                  {/* <h3>{item.HamptonMenu.price}</h3> */}
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
                       {item.HamptonMenu.descparagraph.map((d, index) => (
@@ -107,7 +107,7 @@ const MenuHampton = () => {
               {data.hamptonMenus.slice(6).map((item, index) => (
                 <div className={styles.left} key={index}>
                   <h2>{item.HamptonMenu.title}</h2>
-                  <h3>{item.HamptonMenu.price}</h3>
+                  {/* <h3>{item.HamptonMenu.price}</h3> */}
                   <div className={styles.price}>
                     <div className={styles.pricesLeft}>
                       {item.HamptonMenu.descparagraph.map((d, index) => (
