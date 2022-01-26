@@ -159,7 +159,7 @@
   }
 
   .left p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .pricesLeft {
@@ -172,7 +172,7 @@
   .pricesRight {
     position: absolute;
     right: 0;
-    padding-right: 30px;
+    padding-right: 3px;
   }
 
   .right {
