@@ -1,8 +1,8 @@
-import React from 'react';
-import { useQuery, gql } from '@apollo/client';
+import React from "react";
+import { useQuery, gql } from "@apollo/client";
 
-import styles from './style.module.css';
-import ReactMarkdown from 'react-markdown';
+import styles from "./style.module.css";
+import ReactMarkdown from "react-markdown";
 
 const REVIEWS = gql`
   query seo {
@@ -37,7 +37,10 @@ const Map = () => {
             <ReactMarkdown key={index}>{item.date}</ReactMarkdown>
           ))}
           <h4 className={styles.infoTitle}>{data.maps[2].hampton.title}</h4>
-          <a href="tel:212-837-1014" className={styles.tel}>
+          <a
+            href={"tel:" + data.maps[2].hampton.address}
+            className={styles.tel}
+          >
             <b>{data.maps[2].hampton.address}</b>
           </a>
         </div>
@@ -47,7 +50,8 @@ const Map = () => {
             width="600"
             height="450"
             allowFullScreen=""
-            loading="lazy"></iframe>
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </div>
