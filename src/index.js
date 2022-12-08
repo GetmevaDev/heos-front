@@ -6,9 +6,7 @@ import './global.css';
 import App from './App';
 
 const client = new ApolloClient({
-  uri: 'https://heos.herokuapp.com/graphql',
-  // https://heos.herokuapp.com/
-  // http://localhost:1337/
+  uri: 'https://cms-edditsalon.herokuapp.com/graphql',
   cache: new InMemoryCache(),
 });
 
