@@ -3,6 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 
 import styles from "./style.module.css";
 import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
 
 const REVIEWS = gql`
   query seo {
@@ -42,6 +43,13 @@ const MapManh = () => {
             className={styles.tel}
           >
             <b>{data.maps[5].manhatan.address}</b>
+          </a>
+          <a
+            href="https://app.salonrunner.com/customer/login.htm?id=31228"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className={styles.button}>Book an Appointment</button>
           </a>
         </div>
         <div className={styles.right}>
