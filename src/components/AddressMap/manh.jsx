@@ -3,7 +3,6 @@ import { useQuery, gql } from "@apollo/client";
 
 import styles from "./style.module.css";
 import ReactMarkdown from "react-markdown";
-import { Link } from "react-router-dom";
 
 const REVIEWS = gql`
   query seo {
