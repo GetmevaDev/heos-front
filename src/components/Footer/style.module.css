@@ -17,6 +17,10 @@
   padding-top: 20px;
 }
 
+.textColor {
+  padding-top: 0 !important;
+}
+
 .menu {
   flex: 2;
 }
