@@ -1,19 +1,19 @@
-import React, { lazy, memo } from 'react';
-import { Helmet } from 'react-helmet';
-import ClipLoader from 'react-spinners/HashLoader';
-import { css } from '@emotion/react';
-import { useQuery, gql } from '@apollo/client';
-import LazyLoad from 'react-lazyload';
+import React, { lazy, memo } from "react";
+import { Helmet } from "react-helmet";
+import ClipLoader from "react-spinners/HashLoader";
+import { css } from "@emotion/react";
+import { useQuery, gql } from "@apollo/client";
+import LazyLoad from "react-lazyload";
 
 // import Carousel from '../components/Testimonials/Carousel';
 
-const Navbar = lazy(() => import('../components/Navigation'));
+const Navbar = lazy(() => import("../components/Navigation"));
 
-const Block = lazy(() => import('../components/Block'));
-const Team = lazy(() => import('../components/Team'));
-const Testimonials = lazy(() => import('../components/Testimonials/'));
-const Info = lazy(() => import('../components/Information'));
-const Footer = lazy(() => import('../components/Footer'));
+const Block = lazy(() => import("../components/Block"));
+const Team = lazy(() => import("../components/Team"));
+const Testimonials = lazy(() => import("../components/Testimonials/"));
+const Info = lazy(() => import("../components/Information"));
+const Footer = lazy(() => import("../components/Footer"));
 
 const REVIEWS = gql`
   query seo {
@@ -59,14 +59,20 @@ const About = () => {
         <meta property="og:image" content={data.aboutseo.aboutSeo.image} />
         <meta property="og:url" content={data.aboutseo.aboutSeo.url} />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:title" content={data.aboutseo.aboutSeo.importantTitle} />
+        <meta
+          property="og:title"
+          content={data.aboutseo.aboutSeo.importantTitle}
+        />
       </Helmet>
 
       <LazyLoad>
         <Navbar />
       </LazyLoad>
       <LazyLoad>
-        <Block title={data.aboutseo.aboutSeo.title} img={data.aboutseo.aboutSeo.bg[0].url} />
+        <Block
+          title={data.aboutseo.aboutSeo.title}
+          img={data.aboutseo.aboutSeo.bg[0].url}
+        />
       </LazyLoad>
 
       <LazyLoad>

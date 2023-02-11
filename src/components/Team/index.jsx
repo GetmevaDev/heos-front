@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import styles from './style.module.css';
+import React, { useState, useEffect } from "react";
+import styles from "./style.module.css";
 
-import axios from 'axios';
+import axios from "axios";
 
 const Team = () => {
   const [firstSign, setFirstSign] = useState([]);
@@ -10,8 +10,9 @@ const Team = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = () => {
-    const firstContent = 'https://heos.herokuapp.com/hampton-teams';
-    const secondContent = 'https://heos.herokuapp.com/manhattan-teams';
+    const firstContent = "https://cms-edditsalon.herokuapp.com/hampton-teams";
+    const secondContent =
+      "https://cms-edditsalon.herokuapp.com/manhattan-teams";
 
     const getApiFirst = axios.get(firstContent);
     const getApiSecond = axios.get(secondContent);
@@ -24,7 +25,7 @@ const Team = () => {
         setFirstSign(allDataFirstContent);
         setSecondSign(allDataSecondContent);
         setLoading(false);
-      }),
+      })
     );
   };
 
