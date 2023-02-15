@@ -13,8 +13,14 @@
   display: flex;
   flex-direction: column;
   height: 370px;
+
+
 }
 
+
+.left ul {
+  padding-left: 0;
+}
 .button {
   margin-top: 30px;
   color: #000;

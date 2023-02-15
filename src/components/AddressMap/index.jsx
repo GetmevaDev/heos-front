@@ -30,18 +30,15 @@ const Map = () => {
     <div className="container">
       <div className={styles.map}>
         <div className={styles.left}>
-          <h4 className={styles.infoTitle}>{data.maps[0].hampton.title}</h4>
+          <h4 className={styles.infoTitle}>Address:</h4>
           <p>{data.maps[0].hampton.address}</p>
-          <h4 className={styles.infoTitle}>{data.maps[1].hampton.title}</h4>
-          {data.maps[1].hampton.salonHours.map((item, index) => (
+          <h4 className={styles.infoTitle}>{data.maps[0].hampton.title}</h4>
+          {data.maps[0].hampton.salonHours.map((item, index) => (
             <ReactMarkdown key={index}>{item.date}</ReactMarkdown>
           ))}
-          <h4 className={styles.infoTitle}>{data.maps[2].hampton.title}</h4>
-          <a
-            href={"tel:" + data.maps[2].hampton.address}
-            className={styles.tel}
-          >
-            <b>{data.maps[2].hampton.address}</b>
+          <h4 className={styles.infoTitle}>Phone:</h4>
+          <a href={"tel:" + data.maps[0].hampton.phone} className={styles.tel}>
+            <b>{data.maps[0].hampton.phone}</b>
           </a>
         </div>
         <div className={styles.right}>
